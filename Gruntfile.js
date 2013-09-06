@@ -4,6 +4,9 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     watch: {
+      options: {
+        livereload: 5000
+      },
       files: [
         'src/**'
       ],
@@ -54,6 +57,8 @@ module.exports = function(grunt) {
     concat: {
       build: {
         src: [
+          'src/assets/components/jquery/jquery.js',
+          'src/assets/components/html5shiv/dist/html5shiv.js',
           'src/assets/js/application.js'
         ],
         dest: 'build/assets/javascript/application.js'
@@ -79,7 +84,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib');
-  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-tagrelease');
   grunt.loadNpmTasks('grunt-bumpup');
 
