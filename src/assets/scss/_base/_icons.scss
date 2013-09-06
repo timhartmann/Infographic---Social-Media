@@ -1,0 +1,9 @@
+$icons: (
+);
+
+@each $icon in $icons {
+    $name: nth($icon, 1);
+    .icon-#{$name} {
+        @include icon('before', false, $name);
+    }
+}

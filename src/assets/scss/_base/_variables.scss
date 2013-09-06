@@ -1,0 +1,22 @@
+// Colors
+$black: #000;
+$white: #fff;
+
+$dark-gray: #666;
+
+// Fonts
+$base-font: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+$base-font-size: 1.6;
+$base-font-color: $dark-gray;
+
+// Breakpoints and widths
+$cols: 12;
+$max-wrapper-width: 920px;
+$gutter-width: 20px;
+$prevent-spacing: 1em;
+$breakpoints: 'mobile' 320px, 'mobile-landscape' 480px, 'smaller-tablet' 600px, 'tablet' 768px, 'tablet-landscape' $max-wrapper-width, 'desktop' 1200px;
+
+// Z-Indecies
+
+// Misc
+$border-radius: 3px;
