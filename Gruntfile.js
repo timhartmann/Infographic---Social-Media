@@ -35,12 +35,19 @@ module.exports = function(grunt) {
       ]
     },
     copy: {
-      main: {
+      fonts: {
         expand: true,
         src: ['src/assets/fonts/*'],
         dest: 'build/assets/fonts',
         filter: 'isFile',
         flatten: true
+      },
+      html: {
+        expand: true,
+        src: ['src/*.html'],
+        dest: 'build/',
+        flatten: true,
+        filter: 'isFile'
       }
     },
     cssmin: {
