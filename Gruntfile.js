@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       options: {
-        livereload: 5000
+        livereload: true
       },
       files: [
         'src/**'
@@ -21,7 +21,6 @@ module.exports = function(grunt) {
         files: [
           {
             expanded: true,
-            cwd: 'src/assets',
             src: ['src/assets/scss/application.scss'],
             dest: 'build/assets/stylesheets/application.css',
             filter: 'isFile'
@@ -83,7 +82,7 @@ module.exports = function(grunt) {
     bumpup: ['package.json', 'bower.json'],
     tagrelease: {
       file: 'package.json',
-      commit:  false,
+      commit:  true,
       message: 'Release %version%',
       prefix:  '',
       annotate: false
