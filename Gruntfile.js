@@ -79,29 +79,21 @@ module.exports = function(grunt) {
         dest: 'build/assets/javascript/application.min.js'
       }
     },
-    bumpup: ['package.json', 'bower.json'],
-    tagrelease: {
-      file: 'package.json',
-      commit:  true,
-      message: 'Release %version%',
-      prefix:  '',
-      annotate: false
+    release: {
+      options: {
+        file: [
+          'package.json',
+          'bower.json'
+        ],
+        npm: false,
+        tagMessage: 'release <%= version %>'
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib');
-  grunt.loadNpmTasks('grunt-tagrelease');
-  grunt.loadNpmTasks('grunt-bumpup');
 
   // Default task(s).
   grunt.registerTask('default', ['sass', 'copy', 'concat']);
-  grunt.registerTask('release', function (type) {
-    type = type ? type : 'patch';
-    grunt.task.run('default');
-    grunt.task.run('cssmin');
-    grunt.task.run('clean');
-    grunt.task.run('uglify');
-    grunt.task.run('bumpup:' + type);
-    grunt.task.run('tagrelease');
-  });
+  grunt.registerTask('release', ['default', 'cssmin', 'uglify', 'clean', 'release']);
 };
