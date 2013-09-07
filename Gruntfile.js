@@ -92,8 +92,9 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib');
+  grunt.loadNpmTasks('grunt-release');
 
   // Default task(s).
   grunt.registerTask('default', ['sass', 'copy', 'concat']);
-  grunt.registerTask('release', ['default', 'cssmin', 'uglify', 'clean', 'release']);
+  grunt.registerTask('dist', ['default', 'cssmin', 'uglify', 'release']);
 };
