@@ -1,0 +1,22 @@
+.l-prepage {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 350px;
+
+  text-align: center;
+
+  @include transition(opacity 1s);
+
+  * {
+    color: $white;
+    text-shadow: 0 0 5px rgba(0,0,0,.3);
+  }
+
+  h2 {
+    @include font-size(7);
+  }
+}

@@ -1,9 +1,33 @@
-$icons: (
-);
+@charset "UTF-8";
+
+[class^="icon--"]:before,
+[class*=" icon--"]:before {
+  font-family: "infografik";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
 
 @each $icon in $icons {
-    $name: nth($icon, 1);
-    .icon-#{$name} {
-        @include icon('before', false, $name);
-    }
+  $name: nth($icon, 1);
+  .icon--#{$name} {
+    @include icon('before', $name);
+  }
+}
+
+.icon--facebook-circle {
+  color: $violett-blue;
+}
+.icon--twitter-circle {
+  color: $light-blue;
+}
+.icon--google-plus-circle {
+  color: $dark-red;
 }

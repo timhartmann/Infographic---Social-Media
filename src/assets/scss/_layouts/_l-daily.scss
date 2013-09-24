@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.l-daily {
+  height: 860px;
+
+  background: url(../img/grunge.png) repeat $light-blue;
+
+  .m-floor__body {
+    border-top: 4px solid $light-gray;
+  }
+}
+.l-daily__sky {
+  position: relative;
+
+  .m-cloud {
+    position: absolute;
+    left: 100px;
+
+    &:nth-child(2) {
+      left: auto;
+      right: 300px;
+      top: 125px;
+    }
+  }
+}

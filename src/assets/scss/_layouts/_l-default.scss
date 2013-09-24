@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+// Helpers
+.l-center {
+  text-align: center;
+}
+
+.l-constrained {
+  max-width: $max-wrapper-width;
+  margin: 0 auto;
+  padding: 0 $prevent-spacing;
+}
+
+// Current-View
+.l-viewport {
+  overflow: hidden;
+}
+
+// Header
+.l-banner {
+  padding: 3em 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $index-high;
+
+  background-color: rgba($black, .6);
+
+  color: $white;
+}
+
+// Main / Content
+.l-main {
+  > section {
+    padding-bottom: 6em;
+    padding-top: 6em;
+    position: relative;
+  }
+}
+
+// Footer
+.l-footer {
+  padding-bottom: 1em;
+  padding-top: 2em;
+
+  text-align: justify;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+  > * {
+    display: inline-block;
+    margin-top: 0;
+    vertical-align: middle;
+  }
+}

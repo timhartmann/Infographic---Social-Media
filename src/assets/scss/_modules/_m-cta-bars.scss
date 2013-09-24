@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.m-cta-bar {
+  margin-top: 1em;
+
+  text-align: justify;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+  .m-button {
+    margin-left: .5em;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  > div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

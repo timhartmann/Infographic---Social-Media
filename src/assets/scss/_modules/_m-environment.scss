@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+// Floor
+.m-floor__body {
+  bottom: 0;
+  height: 120px;
+  position: absolute;
+  width: 100%;
+
+  background: url(../img/grunge.png) repeat-x #554c5b;
+}
+.m-floor__grass {
+  bottom: 117px;
+  display: block;
+  height: 29px;
+  position: absolute;
+  width: 100%;
+
+  background: url(../img/grass.png) repeat-x;
+}
+.m-floor__bush {
+  bottom: 120px;
+  display: block;
+  height: 123px;
+  position: absolute;
+  width: 144px;
+
+  background: url(../img/bush.png) no-repeat;
+}
+
+// Stars
+.m-star {
+  display: block;
+  height: 107px;
+  width: 114px;
+
+  background: url(../img/star.png) no-repeat;
+}
+.m-star--big {
+  background-size: 60%;
+}
+.m-star--medium {
+  background-size: 50%;
+}
+.m-star--small {
+  background-size: 30%;
+}
+.m-star--smallest {
+  background-size: 20%;
+}
+
+// Moon
+.m-moon {
+  display: block;
+  height: 114px;
+  width: 114px;
+
+  background: url(../img/moon.png) no-repeat;
+}
+
+// Clouds
+.m-cloud {
+  display: block;
+  height: 97px;
+  width: 142px;
+
+  background: url(../img/cloud.png) no-repeat;
+}
+.m-cloud--small {
+  background-size: 50%;
+}

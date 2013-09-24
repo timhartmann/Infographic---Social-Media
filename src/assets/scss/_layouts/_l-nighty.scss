@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.l-nighty {
+  height: 860px;
+
+  background-color: $dark-blue;
+  background-image: url(../img/nighty.jpg);
+  background-repeat: repeat;
+}
+.l-nighty__sky {
+  position: relative;
+
+  .m-star {
+    position: absolute;
+
+    &:nth-child(2) {
+      left: 300px;
+    }
+    &:nth-child(3) {
+      left: 425px;
+      top: 25px;
+    }
+    &:nth-child(4) {
+      left: 600px;
+      top: -50px;
+    }
+    &:nth-child(5) {
+      right: -100px;
+      top: -70px;
+    }
+    &:nth-child(6) {
+      right: 175px;
+      top: 140px;
+    }
+  }
+}

@@ -1,22 +1,54 @@
+@charset "UTF-8";
+
 // Colors
 $black: #000;
 $white: #fff;
+$gray: #3e3e3e;
+$blue: #698e9a;
+$green: #478c61;
 
+$light-red: #d0503b;
+
+$light-gray: #e3e3e3;
 $dark-gray: #666;
 
+$violett-blue: #45599d;
+$dark-blue: #134f64;
+$light-blue: #49b7f1;
+
+$dark-red: #d04e38;
+
+// Icons
+$icons: (
+  'cross-circle' 'a',
+  'facebook-circle' 'b',
+  'twitter-circle' 'c',
+  'google-plus-circle' 'd',
+  'cross' 'e',
+  'checkmark' 'f'
+);
+
 // Fonts
-$base-font: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+$base-font: Klavika, 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
 $base-font-size: 1.6;
 $base-font-color: $dark-gray;
 
 // Breakpoints and widths
-$cols: 12;
 $max-wrapper-width: 920px;
-$gutter-width: 20px;
+$max-cols: 12;
+$gutter-width: percentage(20px/$max-wrapper-width);
 $prevent-spacing: 1em;
-$breakpoints: 'mobile' 320px, 'mobile-landscape' 480px, 'smaller-tablet' 600px, 'tablet' 768px, 'tablet-landscape' $max-wrapper-width, 'desktop' 1200px;
+$breakpoints: (
+  'mobile' 320px,
+  'mobile-landscape' 480px,
+  'smaller-tablet' 600px,
+  'tablet' 768px,
+  'tablet-landscape' $max-wrapper-width,
+  'desktop' 1200px
+);
 
 // Z-Indecies
+$index-high: 100;
 
 // Misc
 $border-radius: 3px;

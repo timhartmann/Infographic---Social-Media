@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.is-blurry {
+  @include filter(blur(8px));
+}
+.l-infographic.is-blurry {
+  -webkit-transition : -webkit-filter 1500ms;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body.is-active {
+  height: auto;
+  overflow-y: visible;
+
+  .l-infographic {
+    @include filter(blur(0));
+  }
+  .l-prepage {
+    opacity: 0;
+  }
+}
