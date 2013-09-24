@@ -47,6 +47,13 @@ module.exports = function(grunt) {
         dest: 'build/',
         flatten: true,
         filter: 'isFile'
+      },
+      img: {
+        expand: true,
+        src: ['src/assets/img/**'],
+        dest: 'build/assets/img',
+        flatten: true,
+        filter: 'isFile'
       }
     },
     cssmin: {
