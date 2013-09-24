@@ -1,0 +1,31 @@
+{
+  "name": "scss-components",
+  "version": "0.1.0",
+  "main": "src/components.scss",
+  "homepage": "git@github.com:timhartmann/scss-components.git",
+  "authors": [
+    "Tim Hartmann <tim.hartmann93@gmail.com>"
+  ],
+  "description": "Much helpers for the developmentment with scss.",
+  "keywords": [
+    "scss",
+    "helpers"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "tests",
+    "node_modules",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "_release": "0.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.0",
+    "commit": "6d2343a990bcc01a022742945a442b07463cbec2"
+  },
+  "_source": "git://github.com/timhartmann/scss-components.git",
+  "_target": "~0.1.0",
+  "_originalSource": "scss-components",
+  "_direct": true
+}
