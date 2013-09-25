@@ -23,11 +23,42 @@ body.is-active {
   }
 }
 
+// Day / Train
 .l-daily.is-active {
   .m-train {
-    left: 0;
+    left: 25%;
   }
   .m-cloud {
     @include scale(1);
+  }
+  .m-floor__mountains {
+    bottom: 100px;
+    opacity: 1;
+    @include skew(0, 0);
+  }
+  .m-line {
+    width: 100%;
+  }
+}
+
+// Night
+.l-nighty.is-active {
+  .l-nighty__sky {
+    .m-moon {
+      -webkit-animation-name: bounceInDown;
+     -webkit-animation-duration: 1s;
+     -webkit-animation-fill-mode: both;
+    }
+    .m-star {
+      @include scale(1);
+    }
+  }
+}
+
+.l-room.is-active {
+  .m-television:before {
+   -webkit-animation-name: flicker;
+   -webkit-animation-duration: 1.5s;
+   -webkit-animation-iteration-count: infinite;
   }
 }

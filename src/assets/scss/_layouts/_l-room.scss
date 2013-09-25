@@ -1,7 +1,68 @@
 @charset "UTF-8";
 
 .l-room {
-  height: 860px;
+  height: 420px;
 
-  background: url(../img/grunge.png) repeat $blue;
+  background: url(../img/room.jpg) repeat;
+
+  .m-frame {
+    bottom: 210px;
+    left: 50%;
+    margin-left: 235px;
+    position: absolute;
+    right: 0;
+  }
+  .m-lamp {
+    left: 50%;
+    margin-left: -200px;
+    position: absolute;
+    top: 0;
+
+    &:nth-child(2) {
+      margin-left: 200px;
+    }
+  }
+  .m-television {
+    bottom: 200px;
+    left: 50%;
+    margin-left: -300px;
+    position: absolute;
+
+    &:before {
+      left: 5px;
+      opacity: 0;
+      top: 6px;
+    }
+  }
+  .m-table {
+    bottom: 50px;
+    left: 50%;
+    margin-left: 150px;
+    position: absolute;
+    z-index: $index-high;
+  }
+  .m-pizza {
+    left: 50%;
+    margin-left: -60px;
+    position: absolute;
+    top: -10px;
+  }
+  .m-floor {
+    bottom: 0;
+    height: 75px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+    border-top: 3px solid $white;
+
+    background-color: #744d2c;
+  }
+  .m-couch {
+    bottom: 0;
+    left: 50%;
+    margin-left: -355px;
+    position: absolute;
+    z-index: $index-high;
+  }
 }

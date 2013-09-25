@@ -18,7 +18,7 @@
     background-color: transparent;
 
     color: $blue;
-    @include font-size(2.4);
+    @include font-size(1.9);
 
     @include placeholder {
       color: $blue

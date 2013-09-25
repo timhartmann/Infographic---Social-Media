@@ -12,12 +12,17 @@
   .m-floor__bush {
     bottom: 120px;
     left: 50%;
+    margin-left: 350px;
     position: absolute;
   }
   .m-floor__mountains {
-    bottom: 120px;
+    bottom: -90px;
     left: 0;
+    opacity: 0;
     position: absolute;
+
+    @include skew(88deg);
+    @include transition(all 2s ease-in .75s);
   }
   .m-train {
     bottom: 108px;
@@ -25,11 +30,15 @@
     position: absolute;
     z-index: $index-high;
 
-    @include transition(left 2s ease-in 1s);
+    @include transition(left 2s ease-out 1.25s);
   }
   .m-line {
     bottom: 310px;
     position: absolute;
+    width: 0;
+    z-index: $index-high;
+
+    @include transition(width 1.5s ease-in 1s);
   }
 }
 .l-daily__sky {
