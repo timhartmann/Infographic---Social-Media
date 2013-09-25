@@ -22,3 +22,12 @@ body.is-active {
     opacity: 0;
   }
 }
+
+.l-daily.is-active {
+  .m-train {
+    left: 0;
+  }
+  .m-cloud {
+    @include scale(1);
+  }
+}

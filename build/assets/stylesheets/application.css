@@ -504,10 +504,10 @@ h3 {
   right: 0;
   top: 350px;
   text-align: center;
-  -webkit-transition: opacity 1s;
-  -moz-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 .l-prepage * {
   color: white;
@@ -519,11 +519,37 @@ h3 {
 }
 
 .l-daily {
-  height: 860px;
+  height: 730px;
   background: url(../img/grunge.png) repeat #49b7f1;
 }
 .l-daily .m-floor__body {
   border-top: 4px solid #e3e3e3;
+  z-index: 1000;
+}
+.l-daily .m-floor__bush {
+  bottom: 120px;
+  left: 50%;
+  position: absolute;
+}
+.l-daily .m-floor__mountains {
+  bottom: 120px;
+  left: 0;
+  position: absolute;
+}
+.l-daily .m-train {
+  bottom: 108px;
+  left: -100%;
+  position: absolute;
+  z-index: 100;
+  -webkit-transition: left 2s ease-in;
+  -webkit-transition-delay: 1s;
+  -moz-transition: left 2s ease-in 1s;
+  -o-transition: left 2s ease-in 1s;
+  transition: left 2s ease-in 1s;
+}
+.l-daily .m-line {
+  bottom: 310px;
+  position: absolute;
 }
 
 .l-daily__sky {
@@ -532,6 +558,15 @@ h3 {
 .l-daily__sky .m-cloud {
   position: absolute;
   left: 100px;
+  -webkit-transform: scale(0, 0);
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -webkit-transition: -webkit-transform 1s ease-in;
+  -moz-transition: -moz-transform 1s ease-in;
+  -o-transition: -o-transform 1s ease-in;
+  transition: transform 1s ease-in;
 }
 .l-daily__sky .m-cloud:nth-child(2) {
   left: auto;
@@ -708,12 +743,17 @@ h3 {
 }
 
 .m-floor__bush {
-  bottom: 120px;
   display: block;
   height: 123px;
-  position: absolute;
   width: 144px;
   background: url(../img/bush.png) no-repeat;
+}
+
+.m-floor__mountains {
+  display: block;
+  height: 449px;
+  width: 100%;
+  background: url(../img/mountains.png) repeat-x;
 }
 
 .m-star {
@@ -757,6 +797,23 @@ h3 {
   background-size: 50%;
 }
 
+.m-train {
+  display: block;
+  height: 218px;
+  width: 674px;
+  background: url(../img/train.png) no-repeat;
+}
+
+.m-line {
+  width: 100%;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-top: 2px solid transparent;
+  -webkit-box-shadow: 1px 0 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 0 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 0 0 rgba(0, 0, 0, 0.3);
+}
+
 .is-blurry {
   -webkit-filter: blur(8px);
   -moz-filter: blur(8px);
@@ -782,6 +839,17 @@ body.is-active .l-infographic {
 }
 body.is-active .l-prepage {
   opacity: 0;
+}
+
+.l-daily.is-active .m-train {
+  left: 0;
+}
+.l-daily.is-active .m-cloud {
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
 .m-button.is-large {

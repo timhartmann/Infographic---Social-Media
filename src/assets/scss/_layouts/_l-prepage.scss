@@ -9,7 +9,7 @@
 
   text-align: center;
 
-  @include transition(opacity 1s);
+  @include transition(opacity .5s);
 
   * {
     color: $white;

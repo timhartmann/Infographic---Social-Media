@@ -1,12 +1,35 @@
 @charset "UTF-8";
 
 .l-daily {
-  height: 860px;
+  height: 730px;
 
   background: url(../img/grunge.png) repeat $light-blue;
 
   .m-floor__body {
     border-top: 4px solid $light-gray;
+    z-index: $index-higher;
+  }
+  .m-floor__bush {
+    bottom: 120px;
+    left: 50%;
+    position: absolute;
+  }
+  .m-floor__mountains {
+    bottom: 120px;
+    left: 0;
+    position: absolute;
+  }
+  .m-train {
+    bottom: 108px;
+    left: -100%;
+    position: absolute;
+    z-index: $index-high;
+
+    @include transition(left 2s ease-in 1s);
+  }
+  .m-line {
+    bottom: 310px;
+    position: absolute;
   }
 }
 .l-daily__sky {
@@ -15,6 +38,9 @@
   .m-cloud {
     position: absolute;
     left: 100px;
+
+    @include scale(0);
+    @include transition(transform 1s ease-in);
 
     &:nth-child(2) {
       left: auto;
