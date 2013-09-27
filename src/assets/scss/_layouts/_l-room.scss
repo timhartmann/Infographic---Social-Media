@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .l-room {
-  height: 420px;
+  height: 500px;
 
   background: url(../img/room.jpg) repeat;
 
@@ -11,15 +11,23 @@
     margin-left: 235px;
     position: absolute;
     right: 0;
+
+    @include scale(0);
+    @include transition(transform 1s ease-out 2s);
   }
   .m-lamp {
+    height: 0;
     left: 50%;
     margin-left: -200px;
     position: absolute;
     top: 0;
 
+    @include transition(.5s ease-out);
+
     &:nth-child(2) {
       margin-left: 200px;
+
+      @include transition(.5s ease-out .75s);
     }
   }
   .m-television {
@@ -56,13 +64,28 @@
 
     border-top: 3px solid $white;
 
-    background-color: #744d2c;
+    background-color: darken(#3a2c2c, 6%);
   }
   .m-couch {
-    bottom: 0;
+    bottom: 1em;
     left: 50%;
     margin-left: -355px;
     position: absolute;
     z-index: $index-high;
+  }
+}
+
+@-webkit-keyframes bounceInRight {
+  0% {
+    @include translateX(-100%);
+  }
+  30% {
+    @include translateX(0);
+  }
+  40% {
+    @include translateX(-5%);
+  }
+  80% {
+    @include translateX(0);
   }
 }

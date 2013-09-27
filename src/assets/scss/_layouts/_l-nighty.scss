@@ -1,11 +1,50 @@
 @charset "UTF-8";
 
 .l-nighty {
-  height: 730px;
+  height: 800px;
+  position: relative !important;
 
   background-color: $dark-blue;
   background-image: url(../img/nighty.jpg);
   background-repeat: repeat;
+
+  .m-house {
+    position: relative;
+  }
+  .m-house__window {
+    left: 10px;
+    position: absolute;
+    top: 10px;
+
+    // @for $i from 1 through 12 {
+    //   $position: $i*50px;
+
+    //   &:nth-child(#{$i}) {
+    //     left: 25px + $position;
+    //     top: 25px;
+    //   }
+    // }
+    &:nth-child(2) {
+      left: 45px;
+      top: 10px;
+    }
+    &:nth-child(3) {
+      left: 80px;
+      top: 10px;
+    }
+    &:nth-child(4) {
+      left: 115px;
+      top: 10px;
+    }
+    &:nth-child(5) {
+      left: 10px;
+      top: 45px;
+    }
+    &:nth-child(6) {
+      left: 45px;
+      top: 45px;
+    }
+  }
 }
 .l-nighty__sky {
   position: relative;

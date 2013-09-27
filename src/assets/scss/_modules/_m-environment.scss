@@ -167,3 +167,27 @@
 
   background: url(../img/couch.png) no-repeat;
 }
+
+// House
+.m-house {
+  height: 400px;
+  width: 225px;
+
+  background-color: rgba(#172931, .5);
+}
+.m-house__window {
+  display: block;
+  height: 25px;
+  width: 25px;
+
+  background-color: #5d8594;
+}
+.m-house__window--dark {
+  background-color: #2a616a;
+}
+.m-house__window--light {
+  background-color: #eda85c;
+}
+.m-house__window--dark-light {
+  background-color: #77854b;
+}

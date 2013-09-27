@@ -12,9 +12,6 @@ a:hover {
 }
 
 body.is-active {
-  height: auto;
-  overflow-y: visible;
-
   .l-infographic {
     @include filter(blur(0));
   }
@@ -60,5 +57,16 @@ body.is-active {
    -webkit-animation-name: flicker;
    -webkit-animation-duration: 1.5s;
    -webkit-animation-iteration-count: infinite;
+  }
+  .m-lamp {
+    height: 105px;
+  }
+  .m-frame {
+    @include scale(1);
+  }
+  .m-couch {
+    -webkit-animation-name: bounceInRight;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 2s;
   }
 }

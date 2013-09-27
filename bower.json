@@ -8,5 +8,8 @@
   "description": "A infographic about the daily use of social-media.",
   "keywords": [
     "social-media"
-  ]
+  ],
+  "dependencies": {
+    "onepage-scroll": "https://github.com/peachananr/onepage-scroll"
+  }
 }

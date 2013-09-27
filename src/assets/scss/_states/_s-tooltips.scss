@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.m-tooltip__trigger:hover {
+  + .m-tooltip__content {
+    opacity: 1;
+  }
+}

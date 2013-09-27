@@ -72,6 +72,7 @@ module.exports = function(grunt) {
         src: [
           'src/assets/components/jquery/jquery.js',
           'src/assets/components/html5shiv/dist/html5shiv.js',
+          'src/assets/components/onepage-scroll/jquery.onepage-scroll.js',
           'src/assets/js/application.js'
         ],
         dest: 'build/assets/javascript/application.js'

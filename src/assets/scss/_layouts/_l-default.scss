@@ -31,7 +31,14 @@
 
 // Main / Content
 .l-main {
+  .m-progress-bar {
+    left: 0;
+    position: absolute;
+    top: 10em;
+    z-index: $index-highest;
+  }
   > section {
+    @include box-sizing(border-box);
     padding-bottom: 6em;
     padding-top: 6em;
     position: relative;

@@ -8,6 +8,7 @@
   .m-form__input-text,
   .m-form__textarea {
     @include box-sizing(border-box);
+    height: 3.15em;
     margin-top: 1em;
     padding: .5em;
     -webkit-appearance: none;
