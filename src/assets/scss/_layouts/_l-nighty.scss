@@ -8,13 +8,100 @@
   background-image: url(../img/nighty.jpg);
   background-repeat: repeat;
 
+  .m-bench {
+    bottom: 7.5em;
+    left: 50%;
+    margin-left: -470px;
+    opacity: .8;
+    position: absolute;
+  }
+  .m-lantern-small {
+    bottom: 7.5em;
+    left: 50%;
+    margin-left: -400px;
+    opacity: .8;
+    position: absolute;
+  }
+
   .m-house {
-    position: relative;
+    bottom: 7.5em;
+    height: 0;
+    left: 50%;
+    margin-left: -2em;
+    position: absolute;
+
+    @include transition(height .5s ease-out);
+
+    &:nth-child(3) {
+      height: 0;
+      margin-left: 196px;
+
+      @include transition-delay(.5s);
+
+      .m-house__window {
+        &:nth-child(2) {
+          left: 80px;
+
+          @include transition-delay(1.75s);
+        }
+        &:nth-child(3) {
+          left: 80px;
+          top: 80px;
+
+          @include transition-delay(1.85s);
+        }
+        &:nth-child(8) {
+          left: 160px;
+          top: 160px;
+
+          @include transition-delay(1.75s);
+        }
+        &:nth-child(9) {
+          left: 125px;
+          top: 160px;
+
+          @include transition-delay(1.25s);
+        }
+        &:nth-child(10) {
+          left: 125px;
+          top: 195px;
+
+          @include transition-delay(1.25s);
+        }
+      }
+    }
+    &:nth-child(4) {
+      height: 0;
+      margin-left: -260px;
+
+      @include transition-delay(.8s);
+
+      .m-house__window {
+        &:nth-child(2) {
+          left: 115px;
+
+          @include transition-delay(1.25s);
+        }
+        &:nth-child(3) {
+          left: 150px;
+
+          @include transition-delay(1.45s);
+        }
+        &:nth-child(4) {
+          top: 185px;
+
+          @include transition-delay(1.65s);
+        }
+      }
+    }
   }
   .m-house__window {
     left: 10px;
+    opacity: 0;
     position: absolute;
     top: 10px;
+
+    @include transition(opacity 1.25s ease-out 1.25s);
 
     // @for $i from 1 through 12 {
     //   $position: $i*50px;
@@ -27,22 +114,98 @@
     &:nth-child(2) {
       left: 45px;
       top: 10px;
+
+      @include transition-delay(1.25s);
     }
     &:nth-child(3) {
       left: 80px;
       top: 10px;
+
+      @include transition-delay(1.45s);
     }
     &:nth-child(4) {
       left: 115px;
       top: 10px;
+
+      @include transition-delay(1.35s);
     }
     &:nth-child(5) {
       left: 10px;
       top: 45px;
+
+      @include transition-delay(1.15s);
     }
     &:nth-child(6) {
       left: 45px;
       top: 45px;
+
+      @include transition-delay(1.25s);
+    }
+    &:nth-child(7) {
+      left: 80px;
+      top: 115px;
+
+      @include transition-delay(1.45s);
+    }
+    &:nth-child(8) {
+      left: 115px;
+      top: 150px;
+
+      @include transition-delay(1.85s);
+    }
+    &:nth-child(9) {
+      left: 80px;
+      top: 150px;
+
+      @include transition-delay(1.65s);
+    }
+    &:nth-child(10) {
+      left: 80px;
+      top: 185px;
+
+      @include transition-delay(1.85s);
+    }
+    &:nth-child(11) {
+      left: 115px;
+      top: 185px;
+
+      @include transition-delay(1.65s);
+    }
+    &:nth-child(12) {
+      left: 115px;
+      top: 220px;
+
+      @include transition-delay(1.25s);
+    }
+    &:nth-child(13) {
+      left: 150px;
+      top: 150px;
+
+      @include transition-delay(1.35s);
+    }
+    &:nth-child(14) {
+      left: 150px;
+      top: 185px;
+
+      @include transition-delay(1.55s);
+    }
+    &:nth-child(15) {
+      left: 150px;
+      top: 220px;
+
+      @include transition-delay(1.85s);
+    }
+    &:nth-child(16) {
+      left: 150px;
+      top: 255px;
+
+      @include transition-delay(1.15s);
+    }
+    &:nth-child(17) {
+      left: 150px;
+      top: 290px;
+
+      @include transition-delay(1.25s);
     }
   }
 }
@@ -60,27 +223,29 @@
 
     &:nth-child(2) {
       left: 300px;
-      @include transition(.5s all);
+      top: 70px;
+
+      @include transition(.5s all 1.5s);
     }
     &:nth-child(3) {
       left: 425px;
       top: 25px;
-      @include transition(.5s all .75s);
+      @include transition(.5s all 1.75s);
     }
     &:nth-child(4) {
       left: 600px;
       top: -50px;
-      @include transition(.5s all 1.25s);
+      @include transition(.5s all 2.25s);
     }
     &:nth-child(5) {
       right: -100px;
       top: -70px;
-      @include transition(.5s all 1.75s);
+      @include transition(.5s all 2.75s);
     }
     &:nth-child(6) {
-      right: 175px;
+      right: 100px;
       top: 140px;
-      @include transition(.5s all 2.25s);
+      @include transition(.5s all 2.75s);
     }
   }
 }

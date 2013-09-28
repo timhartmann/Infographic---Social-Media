@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+section.l-contact {
+  opacity: 0;
+  padding-top: 250px;
+
+  @include transition(opacity .5s ease-out .75s);
+}

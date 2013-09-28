@@ -191,3 +191,104 @@
 .m-house__window--dark-light {
   background-color: #77854b;
 }
+
+// Window
+.m-window {
+  display: block;
+  height: 595px;
+  position: relative;
+  width: 948px;
+
+  background: url(../img/window.png) no-repeat;
+
+  &:before {
+    content: '';
+    display: block;
+    height: 346px;
+    left: 2.0em;
+    position: absolute;
+    top: 2.4em;
+    width: 655px;
+
+    background: url(../img/window-shadows.png) no-repeat;
+  }
+  &:after {
+    content: '';
+    display: block;
+    height: 335px;
+    left: 2em;
+    position: absolute;
+    top: 2.4em;
+    width: 649px;
+
+    background: url(../img/window-lines.png) no-repeat;
+  }
+
+  > * {
+    position: absolute;
+  }
+  .m-bubble {
+    left: 5.0em;
+    top: 8.0em;
+  }
+  .m-smartphone {
+    right: 16.5em;
+    top: 8.0em;
+  }
+  .m-plant {
+    bottom: 14.3em;
+    right: 26.0em;
+  }
+}
+
+// Plant
+.m-plant {
+  display: block;
+  height: 110px;
+  width: 66px;
+
+  background: url(../img/plant.png) no-repeat;
+}
+
+// Bubble
+.m-bubble {
+  display: block;
+  height: 157px;
+  width: 251px;
+
+  background: url(../img/bubble.png) no-repeat;
+}
+
+// Smartphone
+.m-smartphone {
+  display: block;
+  height: 113px;
+  width: 99px;
+
+  background: url(../img/hand-with-iphone.png) no-repeat;
+}
+
+// Lanterns
+.m-lantern {
+  display: block;
+  height: 555px;
+  width: 261px;
+
+  background: url(../img/lantern.png) no-repeat;
+}
+.m-lantern-small {
+  display: block;
+  height: 129px;
+  width: 58px;
+
+  background: url(../img/lantern-small.png) no-repeat;
+}
+
+// Bench
+.m-bench {
+  display: block;
+  height: 45px;
+  width: 88px;
+
+  background: url(../img/bench.png) no-repeat;
+}

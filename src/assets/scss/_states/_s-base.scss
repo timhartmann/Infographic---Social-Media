@@ -21,7 +21,7 @@ body.is-active {
 }
 
 // Day / Train
-.l-daily.is-active {
+.l-daily.active {
   .m-train {
     left: 25%;
   }
@@ -30,8 +30,8 @@ body.is-active {
   }
   .m-floor__mountains {
     bottom: 100px;
+    height: 449px;
     opacity: 1;
-    @include skew(0, 0);
   }
   .m-line {
     width: 100%;
@@ -39,20 +39,34 @@ body.is-active {
 }
 
 // Night
-.l-nighty.is-active {
+.l-nighty.active {
   .l-nighty__sky {
     .m-moon {
       -webkit-animation-name: bounceInDown;
      -webkit-animation-duration: 1s;
+      -webkit-animation-delay: 1s;
      -webkit-animation-fill-mode: both;
     }
     .m-star {
       @include scale(1);
     }
   }
+  .m-house__window {
+    opacity: 1;
+  }
+  .m-house {
+    height: 400px;
+
+    &:nth-child(3) {
+      height: 250px;
+    }
+    &:nth-child(4) {
+      height: 320px;
+    }
+  }
 }
 
-.l-room.is-active {
+.l-room.active {
   .m-television:before {
    -webkit-animation-name: flicker;
    -webkit-animation-duration: 1.5s;
@@ -65,8 +79,28 @@ body.is-active {
     @include scale(1);
   }
   .m-couch {
-    -webkit-animation-name: bounceInRight;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-delay: 2s;
+    left: 50%;
+    margin-left: -370px;
   }
+  .m-table {
+    height: 127px;
+  }
+}
+
+.l-bar.active {
+  .m-window {
+    .m-smartphone {
+      width: 99px;
+    }
+    .m-bubble {
+      width: 251px;
+    }
+    .m-plant {
+      height: 110px;
+    }
+  }
+}
+
+section.l-contact.active {
+  opacity: 1;
 }

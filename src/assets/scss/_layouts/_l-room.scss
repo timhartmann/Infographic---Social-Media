@@ -6,7 +6,7 @@
   background: url(../img/room.jpg) repeat;
 
   .m-frame {
-    bottom: 210px;
+    bottom: 300px;
     left: 50%;
     margin-left: 235px;
     position: absolute;
@@ -22,16 +22,16 @@
     position: absolute;
     top: 0;
 
-    @include transition(.5s ease-out);
+    @include transition(.5s ease-out .75s);
 
     &:nth-child(2) {
       margin-left: 200px;
 
-      @include transition(.5s ease-out .75s);
+      @include transition(.5s ease-out .1s);
     }
   }
   .m-television {
-    bottom: 200px;
+    bottom: 300px;
     left: 50%;
     margin-left: -300px;
     position: absolute;
@@ -43,11 +43,14 @@
     }
   }
   .m-table {
-    bottom: 50px;
+    bottom: 120px;
+    height: 0;
     left: 50%;
     margin-left: 150px;
     position: absolute;
     z-index: $index-high;
+
+    @include transition(height 1s ease-out 1.5s);
   }
   .m-pizza {
     left: 50%;
@@ -57,7 +60,7 @@
   }
   .m-floor {
     bottom: 0;
-    height: 75px;
+    height: 160px;
     left: 0;
     position: absolute;
     width: 100%;
@@ -67,25 +70,12 @@
     background-color: darken(#3a2c2c, 6%);
   }
   .m-couch {
-    bottom: 1em;
-    left: 50%;
-    margin-left: -355px;
+    bottom: 110px;
+    left: -100%;
+    margin-left: 0;
     position: absolute;
     z-index: $index-high;
-  }
-}
 
-@-webkit-keyframes bounceInRight {
-  0% {
-    @include translateX(-100%);
-  }
-  30% {
-    @include translateX(0);
-  }
-  40% {
-    @include translateX(-5%);
-  }
-  80% {
-    @include translateX(0);
+    @include transition(all 1.5s ease-out 1s);
   }
 }

@@ -4,4 +4,41 @@
   height: 500px;
 
   background: url(../img/bar-bg.jpg) repeat #3a2c2c;
+
+  .m-window {
+    bottom: 0em;
+    position: absolute;
+
+    .m-smartphone {
+      width: 0;
+
+      @include transition(width .5s ease-out);
+    }
+    .m-bubble {
+      width: 0;
+
+      @include transition(width .5s ease-out 1s);
+    }
+    .m-plant {
+      height: 0;
+
+      @include transition(height .5s ease-out 2s);
+    }
+  }
+  .m-lantern {
+    bottom: 0;
+    left: 50%;
+    margin-left: 13.0em;
+    position: absolute;
+  }
+  .m-floor {
+    bottom: 0;
+    display: block;
+    height: 46px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+    background: url(../img/window-bottom.png) repeat-x;
+  }
 }
