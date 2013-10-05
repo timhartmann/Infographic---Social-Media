@@ -1425,9 +1425,45 @@ body, .onepage-wrapper, html {
 .m-form .m-form__textarea::-webkit-input-placeholder {
   color: #698e9a;
 }
+.m-form .m-form__input-text.error,
+.m-form .m-form__textarea.error {
+  border-color: #d0503b;
+}
+.m-form .m-form__input-text.error.placeholder,
+.m-form .m-form__textarea.error.placeholder {
+  color: #d0503b;
+}
+.m-form .m-form__input-text.error:-moz-placeholder,
+.m-form .m-form__textarea.error:-moz-placeholder {
+  color: #d0503b;
+}
+.m-form .m-form__input-text.error::-moz-placeholder,
+.m-form .m-form__textarea.error::-moz-placeholder {
+  color: #d0503b;
+}
+.m-form .m-form__input-text.error:-ms-input-placeholder,
+.m-form .m-form__textarea.error:-ms-input-placeholder {
+  color: #d0503b;
+}
+.m-form .m-form__input-text.error::-webkit-input-placeholder,
+.m-form .m-form__textarea.error::-webkit-input-placeholder {
+  color: #d0503b;
+}
+.m-form .m-form__input-text.error + label,
+.m-form .m-form__textarea.error + label {
+  display: block;
+  padding: .2em .5em;
+  background-color: #d0503b;
+  color: white;
+  font-weight: bold;
+}
 .m-form .m-form__textarea {
+  display: block;
   height: 138px;
   resize: none;
+}
+.m-form .m-form__textarea.error {
+  height: 163px;
 }
 
 .m-box {

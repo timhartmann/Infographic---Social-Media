@@ -13,7 +13,47 @@
       });
     },
     formSend: function() {
+      var validator = function() {
+        $('form').validate({
+          rules: {
+            name: {
+              required: true
+            },
+            email: {
+              required: true,
+              email: true
+            },
+            textarea: {
+              required: true
+            }
+          },
+          messages: {
+            name: {
+              required: "Bitte Namen eintragen."
+            },
+            email: {
+              required: "Bitte Email eintragen.",
+              email: "Bitte gib eine richtige Mail-Adresse an."
+            },
+            textarea: {
+              required: "Schreiben sie uns etwas."
+            }
+          },
+          submitHandler: function() {
+            $.ajax({
+              url: '',
+              type: 'POST',
+              dataType: 'json',
+              json: 'json',
+              data: $('form').serialize(),
 
+              success: function(data) {
+                alert('yea');
+              }
+            });
+          }
+        });
+      }()
     },
     bringTo: function() {
       var $button = $('.l-prepage').find('.m-button');

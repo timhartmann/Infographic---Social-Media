@@ -24,9 +24,30 @@
     @include placeholder {
       color: $blue
     }
+    &.error {
+      border-color: $light-red;
+
+      @include placeholder {
+        color: $light-red;
+      }
+      + label {
+        display: block;
+        padding: .2em .5em;
+
+        background-color: $light-red;
+
+        color: $white;
+        font-weight: bold;
+      }
+    }
   }
   .m-form__textarea {
+    display: block;
     height: 138px;
     resize: none;
+
+    &.error {
+      height: 163px;
+    }
   }
 }

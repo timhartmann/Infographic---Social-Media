@@ -72,6 +72,7 @@ module.exports = function(grunt) {
         src: [
           'src/assets/components/jquery/jquery.js',
           'src/assets/components/html5shiv/dist/html5shiv.js',
+          'src/assets/components/jquery-validation/jquery.validate.js',
           'src/assets/components/onepage-scroll/jquery.onepage-scroll.js',
           'src/assets/components/raphael/raphael.js',
           'src/assets/components/morris.js/morris.min.js',
