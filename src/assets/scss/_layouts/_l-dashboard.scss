@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.l-dashboard {
+  background: #266ab3;
+
+  h2 {
+    color: $white;
+  }
+
+  .m-box {
+    margin-top: 2em;
+  }
+
+  [id*="m-chart--bar--"] {
+    height: 220px;
+  }
+}
+
+.viewing-page-1 {
+  .l-banner {
+    opacity: 0;
+
+    @include transition(opacity .6s ease-out);
+  }
+}

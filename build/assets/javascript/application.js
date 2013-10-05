@@ -18703,9 +18703,7 @@ $.format = $.validator.format;
       self.charts();
     },
     pageScroll: function() {
-      $('.l-main').onepage_scroll({
-         updateURL: true
-      });
+      $('.l-main').onepage_scroll();
     },
     formSend: function() {
       var validator = function() {
@@ -18801,6 +18799,8 @@ $.format = $.validator.format;
       });
     },
     charts: function() {
+
+      // Check network at work or school (Example: .l-nighty)
       new Morris.Donut({
         element: 'm-chart--pie--work-and-school',
         data: [
@@ -18816,6 +18816,8 @@ $.format = $.validator.format;
           }
         ]
       });
+
+      // Event (Example: .l-train)
       new Morris.Donut({
         element: 'm-chart--pie--event',
         data: [
@@ -18831,6 +18833,8 @@ $.format = $.validator.format;
           }
         ]
       });
+
+      // TV
       new Morris.Donut({
         element: 'm-chart--pie--tv',
         data: [
@@ -18846,6 +18850,8 @@ $.format = $.validator.format;
           }
         ]
       });
+
+      // Do things (Example: .l-room)
       new Morris.Donut({
         element: 'm-chart--pie--do-overview',
         data: [
@@ -18871,6 +18877,8 @@ $.format = $.validator.format;
           }
         ]
       });
+
+      // Notification (Example: .l-bar)
       new Morris.Donut({
         element: 'm-chart--pie--notification',
         data: [
@@ -18886,6 +18894,8 @@ $.format = $.validator.format;
           }
         ]
       });
+
+      // Situation (Example l-bar)
       new Morris.Donut({
         element: 'm-chart--pie--situation',
         data: [
@@ -18898,6 +18908,129 @@ $.format = $.validator.format;
             label: 'Nein',
             value: 45,
             color: '#d84735'
+          }
+        ]
+      });
+
+      // Job-Overview
+      new Morris.Bar({
+        element: 'm-chart--bar--job',
+        barColors: function (row, series, type) {
+          if (type === 'bar') {
+            return '#1a9af3';
+          }
+        },
+        gridLineColor: '#508dcc',
+        gridStrokeWidth: .5,
+        gridTextColor: '#fff',
+        data: [
+          {
+            label: 'Angestellter',
+            value: 76
+          },
+          {
+            label: 'Schüler/Student',
+            value: 16
+          },
+          {
+            label: 'Freelancer',
+            value: 12
+          },
+          {
+            label: 'Sonstiges',
+            value: 14
+          }
+        ],
+        xkey: 'label',
+        ykeys: ['value'],
+        labels: ['Personen'],
+        barRatio: 0.4,
+        xLabelAngle: 28
+      });
+
+      // Networks-Overview
+      new Morris.Bar({
+        element: 'm-chart--bar--social',
+        barColors: function (row, series, type) {
+          if (type === 'bar') {
+            return '#1a9af3';
+          }
+        },
+        gridLineColor: '#508dcc',
+        gridStrokeWidth: .5,
+        gridTextColor: '#fff',
+        data: [
+          {
+            label: 'Facebook',
+            value: 108
+          },
+          {
+            label: 'GooglePlus',
+            value: 88
+          },
+          {
+            label: 'Twitter',
+            value: 79
+          },
+          {
+            label: 'Instagram',
+            value: 51
+          },
+          {
+            label: 'Pinterest',
+            value: 41
+          },
+          {
+            label: 'Foursquare',
+            value: 38
+          }
+        ],
+        xkey: 'label',
+        ykeys: ['value'],
+        labels: ['Personen'],
+        barRatio: 0.4,
+        xLabelAngle: 35
+      });
+
+      // Devices-Overview
+      new Morris.Donut({
+        element: 'm-chart--bar--device',
+        backgroundColor: '#1f5ba4',
+        labelColor: '#fff',
+        data: [
+          {
+            label: 'Smartphone',
+            value: 68,
+            color: '#1a9af3'
+          },
+          {
+            label: 'PC/Mac',
+            value: 42,
+            color: '#1d79cc'
+          },
+          {
+            label: 'Tablet',
+            value: 8,
+            color: '#508dcc'
+          }
+        ]
+      });
+
+      // Gender-Overview
+      new Morris.Donut({
+        element: 'm-chart--bar--gender',
+        backgroundColor: '#1f5ba4',
+        labelColor: '#fff',
+        data: [
+          {
+            label: 'Männlich',
+            value: 75,
+            color: '#1a9af3'
+          },
+          {
+            label: 'Weiblich',
+            value: 37,
+            color: '#1d79cc'
           }
         ]
       });

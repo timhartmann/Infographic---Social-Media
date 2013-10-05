@@ -10,8 +10,6 @@ body {
   overflow: hidden;
   position: relative;
 
-  background-color: #e3e3e3;
-
   color: $base-font-color;
   font-family: $base-font;
   @include font-size($base-font-size);

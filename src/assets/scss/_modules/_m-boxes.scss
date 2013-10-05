@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
 .m-box {
+  padding: 1em;
+
   background: url(../img/grunge.png) repeat $light-gray;
+}
+.m-box--white {
+  background: $white;
+}
+.m-box--blue {
+  background: #1f5ba4;
 }
