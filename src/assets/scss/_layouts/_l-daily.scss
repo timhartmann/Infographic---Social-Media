@@ -22,7 +22,6 @@
     position: absolute;
 
     @include transition(all 1.5s ease-out .75s);
-    @include translate3d(0,0,0);
   }
   .m-train {
     bottom: 108px;
@@ -31,7 +30,6 @@
     z-index: $index-high;
 
     @include transition(left 2s ease-out 1.25s);
-    @include translate3d(0,0,0);
   }
   .m-line {
     bottom: 310px;
@@ -40,7 +38,6 @@
     z-index: $index-high;
 
     @include transition(width 1.5s ease-in 1s);
-    @include translate3d(0,0,0);
   }
   .m-tooltip {
     margin-left: -200px;
@@ -56,8 +53,6 @@
 
     @include scale(0);
     @include transition(transform 1s ease-in);
-    @include translate3d(0,0,0);
-    @include translateZ(0);
 
     &:nth-child(2) {
       left: auto;

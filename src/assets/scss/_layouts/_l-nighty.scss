@@ -29,7 +29,6 @@
     top: 200px;
 
     @include transition(opacity .5s ease-out 4s);
-    @include translate3d(0,0,0);
   }
 
   .m-house {
@@ -40,7 +39,6 @@
     position: absolute;
 
     @include transition(height .5s ease-out);
-    @include translate3d(0,0,0);
 
     &:nth-child(3) {
       height: 0;
@@ -112,7 +110,6 @@
     top: 10px;
 
     @include transition(opacity 1.25s ease-out 1.25s);
-    @include translate3d(0,0,0);
 
     // @for $i from 1 through 12 {
     //   $position: $i*50px;
@@ -231,32 +228,33 @@
     position: absolute;
 
     @include scale(0);
+    @include transition(.5s all 1.5s);
 
     &:nth-child(2) {
       left: 300px;
       top: 70px;
 
-      @include transition(.5s all 1.5s);
+      @include transition-delay(1.5s);
     }
     &:nth-child(3) {
       left: 425px;
       top: 25px;
-      @include transition(.5s all 1.75s);
+      @include transition-delay(1.75s);
     }
     &:nth-child(4) {
       left: 600px;
       top: -50px;
-      @include transition(.5s all 2.25s);
+      @include transition-delay(2.25s);
     }
     &:nth-child(5) {
       right: -100px;
       top: -70px;
-      @include transition(.5s all 2.75s);
+      @include transition-delay(2.75s);
     }
     &:nth-child(6) {
       right: 100px;
       top: 140px;
-      @include transition(.5s all 2.75s);
+      @include transition-delay(2.75s);
     }
   }
 }

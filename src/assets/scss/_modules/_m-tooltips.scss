@@ -9,7 +9,6 @@
 .m-tooltip--top .m-tooltip__content {
   top: -1em;
 
-  @include translateZ(0);
   @include translateY(-100%);
 }
 .m-tooltip__trigger {
@@ -46,7 +45,6 @@
   color: $gray;
 
   @include transition(all .5s ease-out .25s);
-  @include translate3d(0,0,0);
 
   p {
     margin-top: 0;
