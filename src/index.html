@@ -7,16 +7,29 @@
     <meta name="author" content="Tim Hartmann">
 
     <link rel="stylesheet" href="assets/stylesheets/application.css">
+    <script src="assets/javascript/application.js"></script>
   </head>
   <body class="is-active">
     <div class="l-infographic is-blurry">
       <header class="l-banner" role="banner">
         <div class="l-constrained">
-          <h1>Wann und wo checkst du <strong>zum ersten Mal</strong> die Neuigkeiten eines deiner Netzwerke</h1>
+          <h1>Wann checkst du zum ersten Mal eines deiner Netzwerke?</h1>
+          <ul>
+            <li class="pie-chart pie-chart--first" data-percent="70">
+              <div>
+                <span>50</span><i>%</i>
+              </div>
+            </li>
+             <li class="pie-chart pie-chart--second" data-percent="25">
+              <div>
+                <span>50</span><i>%</i>
+              </div>
+            </li>
+          </ul>
         </div>
       </header>
       <main class="l-main" role="main">
-        <section class="l-nighty is-active">
+        <section class="l-nighty is-active" data-title="Ziemlich viele Leute checken ihr Netzwerk schon morgens im Bett:" data-options='{"chartfirst":"50", "chartsecond":"85"}'>
           <div class="l-nighty__sky l-constrained">
             <i class="m-moon"></i>
             <i class="m-star"></i>
@@ -69,13 +82,24 @@
             <i class="m-house__window m-house__window--dark-light"></i>
             <i class="m-house__window"></i>
           </div>
+          <div class="m-tooltip">
+            <i class="m-tooltip__trigger"></i>
+            <div class="m-tooltip__content">
+              <div class="l-units">
+                <div class="l-u--2-5">
+                  <h3>Während der Arbeit oder der Schule besuche ich regelmäßig meine Netzwerke.</h3>
+                </div>
+                <div class="l-u--3-5" class="m-pie-chart" id="m-chart--pie--work-and-school"></div>
+              </div>
+            </div>
+          </div>
           <i class="m-bench"></i>
           <i class="m-lantern-small"></i>
           <div class="m-floor">
             <i class="m-floor__body"></i>
           </div>
         </section>
-        <section class="l-daily is-active">
+        <section class="l-daily is-active" data-title="Viele Leute checken ihre Neuigkeiten unterwegs:" data-options='{"chartfirst":"20", "chartsecond":"15"}'>
           <div class="l-daily__sky l-constrained">
             <i class="m-cloud"></i>
             <i class="m-cloud m-cloud--small"></i>
@@ -88,8 +112,19 @@
             <i class="m-floor__grass"></i>
             <i class="m-floor__body"></i>
           </div>
+          <div class="m-tooltip m-tooltip--top">
+            <i class="m-tooltip__trigger"></i>
+            <div class="m-tooltip__content">
+              <div class="l-units">
+                <div class="l-u--2-5">
+                  <h3>Du wurdest in einem Netzwerk auf eine Veranstaltung aufmerksam gemacht und bist nur deswegen dort hin gegangen.</h3>
+                </div>
+                <div class="l-u--3-5" id="m-chart--pie--event"></div>
+              </div>
+            </div>
+          </div>
         </section>
-        <section class="l-room">
+        <section class="l-room" data-title=":" data-options='{"chartfirst":"42", "chartsecond":"66"}'>
           <div class="l-constrained">
             <i class="m-frame"></i>
             <i class="m-lamp"></i>
@@ -100,9 +135,31 @@
               <i class="m-pizza"></i>
             </div>
             <div class="m-floor"></div>
+            <div class="m-tooltip m-tooltip--top">
+              <i class="m-tooltip__trigger"></i>
+              <div class="m-tooltip__content">
+                <div class="l-units">
+                  <div class="l-u--2-5">
+                    <h3>Während ich etwas im TV sah, habe ich meine Meinung dazu auf mindestens einem Netzwerk geteilt.</h3>
+                  </div>
+                  <div class="l-u--3-5" id="m-chart--pie--tv"></div>
+                </div>
+              </div>
+            </div>
+            <div class="m-tooltip m-tooltip--top">
+              <i class="m-tooltip__trigger"></i>
+              <div class="m-tooltip__content">
+                <div class="l-units">
+                  <div class="l-u--2-5">
+                    <h3>Neben dem / Beim  ______ habe ich meine Netzwerke gecheckt oder etwas geteilt.</h3>
+                  </div>
+                  <div class="l-u--3-5" id="m-chart--pie--do-overview"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
-        <section class="l-bar">
+        <section class="l-bar" data-title="Soziale Netzwerke verhelfen dabei, neue Leute kennenzulernen:" data-options='{"chartfirst":"12", "chartsecond":"39"}'>
           <div class="l-constrained">
             <div class="m-window">
               <i class="m-plant"></i>
@@ -111,6 +168,29 @@
             </div>
             <i class="m-lantern"></i>
             <i class="m-floor"></i>
+            <div class="m-tooltip m-tooltip--top">
+              <i class="m-tooltip__trigger"></i>
+              <div class="m-tooltip__content">
+                <div class="l-units">
+                  <div class="l-u--2-5">
+                    <h3>Du sitzt gemütlich mit einer Freundin / einem Freund in der Bar und bekommst eine Benachrichtigung von eines deiner Netzwerke.
+                    <strong>Schaust du nach, worum es sich genau handelt, obwohl du dich gerade unterhältst?</strong></h3>
+                  </div>
+                  <div class="l-u--3-5" id="m-chart--pie--notification"></div>
+                </div>
+              </div>
+            </div>
+            <div class="m-tooltip">
+              <i class="m-tooltip__trigger"></i>
+              <div class="m-tooltip__content">
+                <div class="l-units">
+                  <div class="l-u--2-5">
+                    <h3>Es gab schon einmal die Situation,obwohl ihr am selben Tisch gesessen habt, in der deine Freunde und du auf einem der Netzwerke wart um dort die Neuigkeiten zu checken.</h3>
+                  </div>
+                  <div class="l-u--3-5" id="m-chart--pie--situation"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <section class="l-contact m-box">
@@ -163,10 +243,12 @@
         </section>
       </main>
     </div>
-    <!-- <div class="l-prepage">
+<!--     <div class="l-prepage">
       <h2>Social Media</h2>
       <h3>Die tägliche Nutzung von Facebook, Twitter & Co.</h3>
+      <div class="l-constrained">
+        <a href="" class="m-button">Zur Infografik</a>
+      </div>
     </div> -->
-    <script src="assets/javascript/application.js"></script>
   </body>
 </html>

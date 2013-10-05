@@ -12,8 +12,10 @@
     position: absolute;
     right: 0;
 
+    @include translateZ(0);
     @include scale(0);
     @include transition(transform 1s ease-out 2s);
+    @include translate3d(0,0,0);
   }
   .m-lamp {
     height: 0;
@@ -23,11 +25,13 @@
     top: 0;
 
     @include transition(.5s ease-out .75s);
+    @include translate3d(0,0,0);
 
     &:nth-child(2) {
       margin-left: 200px;
 
       @include transition(.5s ease-out .1s);
+      @include translate3d(0,0,0);
     }
   }
   .m-television {
@@ -51,6 +55,7 @@
     z-index: $index-high;
 
     @include transition(height 1s ease-out 1.5s);
+    @include translate3d(0,0,0);
   }
   .m-pizza {
     left: 50%;
@@ -77,5 +82,15 @@
     z-index: $index-high;
 
     @include transition(all 1.5s ease-out 1s);
+    @include translate3d(0,0,0);
+  }
+  .m-tooltip {
+    margin-left: -180px;
+    margin-top: 70px;
+
+    &:nth-child(2n) {
+      margin-left: 250px;
+      margin-top: 125px;
+    }
   }
 }

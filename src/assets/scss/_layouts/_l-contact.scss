@@ -6,3 +6,11 @@ section.l-contact {
 
   @include transition(opacity .5s ease-out .75s);
 }
+
+.viewing-page-5 {
+  .l-banner {
+    opacity: 0;
+
+    @include transition(opacity .6s ease-out);
+  }
+}

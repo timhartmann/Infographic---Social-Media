@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+
+// Thanks animate.css
+// BounceInDown
 @-webkit-keyframes bounceInDown {
   60% {
     opacity: 1;
@@ -13,8 +16,22 @@
   }
 }
 
+// Flicker
 @-webkit-keyframes flicker {
   0% { opacity: 1; }
   50% { opacity: .5; }
   100% { opacity: 0; }
+}
+
+// Pulse
+@-webkit-keyframes pulse {
+  0% {
+    @include box-shadow(none);
+  }
+  50% {
+    @include box-shadow(0 0 10px rgba($white, 1));
+  }
+  100% {
+    @include box-shadow(none);
+  }
 }

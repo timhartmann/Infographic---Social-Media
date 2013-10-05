@@ -1,7 +1,12 @@
 @charset "UTF-8";
 
 .m-tooltip__trigger:hover {
+  -webkit-animation-play-state: paused;
+
   + .m-tooltip__content {
     opacity: 1;
   }
+}
+.m-tooltip__content:hover {
+  opacity: 1;
 }

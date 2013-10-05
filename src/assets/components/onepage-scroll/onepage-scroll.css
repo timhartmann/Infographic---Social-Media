@@ -3,7 +3,9 @@ body, html {
   overflow: hidden;
   -webkit-transition: opacity 400ms;
   -moz-transition: opacity 400ms;
-  transition: opacity 400ms;
+  transition:;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 
 body, .onepage-wrapper, html {
@@ -45,7 +47,7 @@ body, .onepage-wrapper, html {
   width: 4px;
   height: 4px;
   display: block;
-  
+
 }
 .onepage-pagination li a:before{
   content: '';

@@ -6,6 +6,12 @@
   top: 24em;
   z-index: $index-highest;
 }
+.m-tooltip--top .m-tooltip__content {
+  top: -1em;
+
+  @include translateZ(0);
+  @include translateY(-100%);
+}
 .m-tooltip__trigger {
   display: block;
   height: 2em;
@@ -28,29 +34,21 @@
   opacity: 0;
   padding: 1em;
   position: absolute;
+  pointer-events: none;
   top: 3em;
-  width: 250px;
+  width: 540px;
 
   background-color: $white;
+  @include box-shadow(0 0 5px rgba(0,0,0,.3));
+
   border-radius: 3px;
 
   color: $gray;
 
-  @include transition(all .5s ease-out);
+  @include transition(all .5s ease-out .25s);
+  @include translate3d(0,0,0);
 
   p {
     margin-top: 0;
-  }
-}
-
-@-webkit-keyframes pulse {
-  0% {
-    @include box-shadow(none);
-  }
-  50% {
-    @include box-shadow(0 0 10px rgba($white, 1));
-  }
-  100% {
-    @include box-shadow(none);
   }
 }

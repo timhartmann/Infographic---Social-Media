@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         files: [
           {
             expanded: true,
-            src: ['src/assets/scss/*.scss'],
+            src: ['src/assets/scss/*.scss', 'src/assets/components/morris.js/morris.css'],
             dest: 'build/assets/stylesheets/application.css',
             filter: 'isFile'
           }
@@ -73,6 +73,9 @@ module.exports = function(grunt) {
           'src/assets/components/jquery/jquery.js',
           'src/assets/components/html5shiv/dist/html5shiv.js',
           'src/assets/components/onepage-scroll/jquery.onepage-scroll.js',
+          'src/assets/components/raphael/raphael.js',
+          'src/assets/components/morris.js/morris.min.js',
+          'src/assets/js/easypiechart.js',
           'src/assets/js/application.js'
         ],
         dest: 'build/assets/javascript/application.js'

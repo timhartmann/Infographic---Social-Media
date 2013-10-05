@@ -44,7 +44,7 @@ body.is-active {
     .m-moon {
       -webkit-animation-name: bounceInDown;
      -webkit-animation-duration: 1s;
-      -webkit-animation-delay: 1s;
+      -webkit-animation-delay: 3s;
      -webkit-animation-fill-mode: both;
     }
     .m-star {
@@ -52,6 +52,9 @@ body.is-active {
     }
   }
   .m-house__window {
+    opacity: 1;
+  }
+  .m-tooltip {
     opacity: 1;
   }
   .m-house {
