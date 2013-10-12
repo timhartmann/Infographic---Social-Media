@@ -3,7 +3,7 @@
 .m-tooltip {
   left: 50%;
   position: absolute;
-  top: 24em;
+  top: 50%;
   z-index: $index-highest;
 }
 .m-tooltip--top .m-tooltip__content {
@@ -25,6 +25,9 @@
   -webkit-animation-name: pulse;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: 1.5s;
+     -moz-animation-name: pulse;
+     -moz-animation-iteration-count: infinite;
+     -moz-animation-duration: 1.5s;
 }
 .m-tooltip__content {
   @include box-sizing(border-box);

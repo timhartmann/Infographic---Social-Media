@@ -2,6 +2,7 @@
 
 .m-tooltip__trigger:hover {
   -webkit-animation-play-state: paused;
+     -moz-animation-play-state: paused;
 
   + .m-tooltip__content {
     opacity: 1;

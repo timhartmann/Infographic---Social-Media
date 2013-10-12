@@ -227,6 +227,8 @@
   .m-star {
     position: absolute;
 
+    @include backface-visibility(hidden);
+    @include translateZ(0);
     @include scale(0);
     @include transition(.5s all 1.5s);
 

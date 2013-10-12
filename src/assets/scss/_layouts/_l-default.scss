@@ -88,6 +88,9 @@
     padding-bottom: 6em;
     padding-top: 6em;
     position: relative;
+
+    @include transform-style(preserve-3d);
+    @include backface-visibility(hidden);
   }
 }
 

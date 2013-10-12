@@ -5,6 +5,7 @@
 }
 .l-infographic.is-blurry {
   -webkit-transition : -webkit-filter 1500ms;
+     -moz-transition : -webkit-filter 1500ms;
 }
 
 a:hover {
@@ -45,7 +46,11 @@ body.is-active {
       -webkit-animation-name: bounceInDown;
      -webkit-animation-duration: 1s;
       -webkit-animation-delay: 3s;
-     -webkit-animation-fill-mode: both;
+     -webkit-animation-fill-mode: forwards;
+        -moz-animation-name: bounceInDown;
+        -moz-animation-duration: 1s;
+        -moz-animation-delay: 3s;
+        -moz-animation-fill-mode: forwards;
     }
     .m-star {
       @include scale(1);
@@ -74,6 +79,11 @@ body.is-active {
    -webkit-animation-name: flicker;
    -webkit-animation-duration: 1.5s;
    -webkit-animation-iteration-count: infinite;
+   -webkit-animation-fill-mode: forwards;
+      -moz-animation-name: flicker;
+      -moz-animation-duration: 1.5s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-fill-mode: forwards;
   }
   .m-lamp {
     height: 105px;

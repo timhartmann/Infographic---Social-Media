@@ -16,10 +16,6 @@
   }
 }
 
-.viewing-page-1 {
-  .l-banner {
-    opacity: 0;
-
-    @include transition(opacity .6s ease-out);
-  }
+.viewing-page-1 .l-banner {
+  opacity: 0;
 }

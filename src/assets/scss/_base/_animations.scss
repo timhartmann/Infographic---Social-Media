@@ -6,13 +6,13 @@
 @-webkit-keyframes bounceInDown {
   60% {
     opacity: 1;
-    -webkit-transform: translateY(30px);
+    @include translateY(30px);
   }
   80% {
-    -webkit-transform: translateY(-10px);
+    @include translateY(-10px);
   }
   100% {
-    -webkit-transform: translateY(0);
+    @include translateY(0);
   }
 }
 

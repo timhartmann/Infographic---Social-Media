@@ -2,14 +2,26 @@
   60% {
     opacity: 1;
     -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    transform: translateY(30px);
   }
 
   80% {
     -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
   }
 
   100% {
     -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -121,6 +133,8 @@ body {
   font-size: 1.6rem;
   line-height: 1.3;
   -webkit-font-smoothing: antialiased;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translateZ(0);
 }
 
 p {
@@ -582,6 +596,16 @@ h3 {
   padding-bottom: 6em;
   padding-top: 6em;
   position: relative;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .l-footer {
@@ -1045,6 +1069,16 @@ h3 {
 }
 .l-nighty__sky .m-star {
   position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
   -webkit-transform: scale(0, 0);
   -moz-transform: scale(0, 0);
   -ms-transform: scale(0, 0);
@@ -1232,10 +1266,6 @@ section.l-contact {
 
 .viewing-page-1 .l-banner {
   opacity: 0;
-  -webkit-transition: opacity 0.6s ease-out;
-  -moz-transition: opacity 0.6s ease-out;
-  -o-transition: opacity 0.6s ease-out;
-  transition: opacity 0.6s ease-out;
 }
 
 body, .onepage-wrapper, html {
@@ -1244,6 +1274,8 @@ body, .onepage-wrapper, html {
   padding: 0;
   width: 100%;
   height: 100%;
+  -webkit-transform: translateZ(0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .onepage-wrapper {
@@ -1257,6 +1289,8 @@ body, .onepage-wrapper, html {
 .onepage-wrapper .section {
   min-height: 100%;
   width: 100%;
+  -webkit-transform: translateZ(0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .onepage-pagination {
@@ -1341,8 +1375,9 @@ body, .onepage-wrapper, html {
   border: 2px solid #698e9a;
   background-color: transparent;
   color: #698e9a;
-  font-size: 19px;
-  font-size: 1.9rem;
+  font-family: Klavika, "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-size: 21px;
+  font-size: 2.1rem;
 }
 .m-form .m-form__input-text.placeholder,
 .m-form .m-form__textarea.placeholder {
@@ -1398,11 +1433,11 @@ body, .onepage-wrapper, html {
 }
 .m-form .m-form__textarea {
   display: block;
-  height: 138px;
+  height: 154px;
   resize: none;
 }
 .m-form .m-form__textarea.error {
-  height: 163px;
+  height: 180px;
 }
 
 .m-box {
@@ -1481,7 +1516,7 @@ body, .onepage-wrapper, html {
 .m-tooltip {
   left: 50%;
   position: absolute;
-  top: 24em;
+  top: 50%;
   z-index: 1500;
 }
 
@@ -1505,6 +1540,9 @@ body, .onepage-wrapper, html {
   -webkit-animation-name: pulse;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: 1.5s;
+  -moz-animation-name: pulse;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 1.5s;
 }
 
 .m-tooltip__content {
@@ -1807,6 +1845,7 @@ body, .onepage-wrapper, html {
 
 .l-infographic.is-blurry {
   -webkit-transition: -webkit-filter 1500ms;
+  -moz-transition: -webkit-filter 1500ms;
 }
 
 a:hover {
@@ -1845,7 +1884,11 @@ body.is-active .l-prepage {
   -webkit-animation-name: bounceInDown;
   -webkit-animation-duration: 1s;
   -webkit-animation-delay: 3s;
-  -webkit-animation-fill-mode: both;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: bounceInDown;
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 3s;
+  -moz-animation-fill-mode: forwards;
 }
 .l-nighty.active .l-nighty__sky .m-star {
   -webkit-transform: scale(1, 1);
@@ -1874,6 +1917,11 @@ body.is-active .l-prepage {
   -webkit-animation-name: flicker;
   -webkit-animation-duration: 1.5s;
   -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: flicker;
+  -moz-animation-duration: 1.5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-fill-mode: forwards;
 }
 .l-room.active .m-lamp {
   height: 105px;
@@ -1913,6 +1961,7 @@ section.l-contact.active {
 
 .m-tooltip__trigger:hover {
   -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
 }
 .m-tooltip__trigger:hover + .m-tooltip__content {
   opacity: 1;
