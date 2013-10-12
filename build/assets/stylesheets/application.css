@@ -1530,6 +1530,10 @@ body, .onepage-wrapper, html {
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
 }
+.m-tooltip--top .m-tooltip__content:before {
+  bottom: -1em;
+  top: auto;
+}
 
 .m-tooltip__trigger {
   display: block;
@@ -1570,6 +1574,14 @@ body, .onepage-wrapper, html {
   -moz-transition: all 0.5s ease-out 0.25s;
   -o-transition: all 0.5s ease-out 0.25s;
   transition: all 0.5s ease-out 0.25s;
+}
+.m-tooltip__content:before {
+  content: '';
+  height: 1em;
+  left: 0;
+  position: absolute;
+  top: -1em;
+  width: 100%;
 }
 .m-tooltip__content p {
   margin-top: 0;
@@ -1855,7 +1867,7 @@ a:hover {
 }
 
 body.is-active {
-  overflow: auto;
+  overflow-y: auto;
 }
 body.is-active .l-infographic {
   -webkit-filter: blur(0);
@@ -1973,10 +1985,12 @@ section.l-contact.active {
 }
 .m-tooltip__trigger:hover + .m-tooltip__content {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .m-tooltip__content:hover {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .m-button.is-large {

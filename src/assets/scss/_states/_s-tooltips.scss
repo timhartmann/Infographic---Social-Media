@@ -6,8 +6,10 @@
 
   + .m-tooltip__content {
     opacity: 1;
+    pointer-events: auto;
   }
 }
 .m-tooltip__content:hover {
   opacity: 1;
+  pointer-events: auto;
 }

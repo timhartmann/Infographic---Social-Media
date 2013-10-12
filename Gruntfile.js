@@ -59,7 +59,7 @@ module.exports = function(grunt) {
     imagemin: {
       build: {
         options: {
-          optimizationLevel: 3
+          optimizationLevel: 5
         },
         files: [{
           expand: true,
@@ -119,11 +119,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bumpup');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'copy', 'imagemin', 'concat']);
+  grunt.registerTask('default', ['sass', 'copy', 'concat']);
   grunt.registerTask('release', function (type) {
     type = type ? type : 'patch';
     grunt.task.run('default');
     grunt.task.run('cssmin');
+    grunt.task.run('imagemin');
     grunt.task.run('clean');
     grunt.task.run('uglify');
     grunt.task.run('bumpup:' + type);

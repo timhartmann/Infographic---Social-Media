@@ -13,7 +13,7 @@ a:hover {
 }
 
 body.is-active {
-  overflow: auto;
+  overflow-y: auto;
 
   .l-infographic {
     @include filter(blur(0));
