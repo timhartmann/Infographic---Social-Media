@@ -76,7 +76,7 @@ module.exports = function(grunt) {
           'src/assets/components/onepage-scroll/jquery.onepage-scroll.js',
           'src/assets/components/raphael/raphael.js',
           'src/assets/components/morris.js/morris.min.js',
-          'src/assets/js/easypiechart.js',
+          'src/assets/components/jquery.easy-pie-chart/dist/jquery.easypiechart.js',
           'src/assets/js/application.js'
         ],
         dest: 'build/assets/javascript/application.js'

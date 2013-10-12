@@ -64,44 +64,44 @@
     },
     headerReplace: function() {
       var $title = $('.l-banner h1'),
-          $chartPieFirst = $('.l-banner .pie-chart--first'),
-          $chartPieSecond = $('.l-banner .pie-chart--second'),
           $sections = $('.l-main > section'),
           $wrap = $('.l-main');
 
-      $(document).on('onepagescroll.animation.started', $wrap, function(){
-        $sections.each(function() {
-          if($(this).hasClass('active')) {
-            var $titleData = $(this).data('title'),
-                $percentFirstData = $(this).data('options').chartfirst,
-                $percentSecondData = $(this).data('options').chartsecond;
-
-            $title.text($titleData);
-            $chartPieFirst.data('percent', $percentFirstData);
-            $chartPieSecond.data('percent', $percentSecondData);
-          }
-        });
-        $chartPieFirst.easyPieChart({
-          animate: 2000,
-          size: 90,
-          barColor: '#eca352',
-          trackColor: 'transparent',
-          scaleColor: 'transparent',
-          onStep: function(value) {
-            this.$el.find('span').text(~~value);
-          }
-        });
-        $chartPieSecond.easyPieChart({
-          animate: 2000,
-          size: 90,
-          barColor: '#d84735',
-          trackColor: 'transparent',
-          scaleColor: 'transparent',
-          onStep: function(value) {
-            this.$el.find('span').text(~~value);
-          }
-        });
+      $('.l-banner .pie-chart--first').easyPieChart({
+        animate: 2000,
+        size: 90,
+        barColor: '#eca352',
+        trackColor: 'none',
+        scaleColor: 'none',
+        onStep: function(value) {
+          this.$el.find('span').text(~~value);
+        }
       });
+      $('.l-banner .pie-chart--second').easyPieChart({
+        animate: 2000,
+        size: 90,
+        barColor: '#d84735',
+        trackColor: 'none',
+        scaleColor: 'none',
+        onStep: function(value) {
+          this.$el.find('span').text(~~value);
+        }
+      });
+      var onScrollStart = function() {
+        $(document).on('onepagescroll.animation.started', $wrap, function(){
+          $sections.each(function() {
+            if($(this).hasClass('active')) {
+              var $titleData = $(this).data('title'),
+                  $firstData = $(this).data('options').chartfirst,
+                  $secondData = $(this).data('options').chartsecond;
+
+              $title.text($titleData);
+              $('.l-banner .pie-chart--first').data('easyPieChart').update($firstData);
+              $('.l-banner .pie-chart--second').data('easyPieChart').update($secondData);
+            }
+          });
+        });
+      }();
     },
     charts: function() {
 

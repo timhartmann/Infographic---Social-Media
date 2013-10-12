@@ -1,6 +1,3 @@
-// Thanks to Metty from Codepen
-// Original: http://codepen.io/Metty/pen/hDsej
-
 (function($) {
   $.easyPieChart = function(el, options) {
     var addScaleLine, animateLine, drawLine, easeInOutQuad, rAF, renderBackground, renderScale, renderTrack,
@@ -184,3 +181,6 @@
   };
   return void 0;
 })(jQuery);
+
+
+

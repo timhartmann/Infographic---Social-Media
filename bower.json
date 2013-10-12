@@ -10,6 +10,7 @@
     "social-media"
   ],
   "dependencies": {
-    "onepage-scroll": "https://github.com/peachananr/onepage-scroll"
+    "onepage-scroll": "https://github.com/peachananr/onepage-scroll",
+    "jquery.easy-pie-chart": "~2.0.4"
   }
 }

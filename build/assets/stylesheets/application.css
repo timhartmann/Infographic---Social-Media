@@ -125,6 +125,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
   overflow: hidden;
   position: relative;
   color: #666666;
@@ -739,9 +740,10 @@ h3 {
 .l-bar .m-window .m-smartphone {
   width: 0;
   -webkit-transition: width 0.5s ease-out;
-  -moz-transition: width 0.5s ease-out;
-  -o-transition: width 0.5s ease-out;
-  transition: width 0.5s ease-out;
+  -webkit-transition-delay: 0.75s;
+  -moz-transition: width 0.5s ease-out 0.75s;
+  -o-transition: width 0.5s ease-out 0.75s;
+  transition: width 0.5s ease-out 0.75s;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -1297,7 +1299,7 @@ body, .onepage-wrapper, html {
   position: absolute;
   left: 10px;
   top: 50%;
-  z-index: 5;
+  z-index: -1;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1852,6 +1854,9 @@ a:hover {
   text-decoration: underline;
 }
 
+body.is-active {
+  overflow: auto;
+}
 body.is-active .l-infographic {
   -webkit-filter: blur(0);
   -moz-filter: blur(0);
@@ -1859,6 +1864,9 @@ body.is-active .l-infographic {
 }
 body.is-active .l-prepage {
   opacity: 0;
+}
+body.is-active .onepage-pagination {
+  z-index: 5;
 }
 
 .l-daily.active .m-train {

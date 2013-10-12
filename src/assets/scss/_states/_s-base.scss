@@ -13,11 +13,16 @@ a:hover {
 }
 
 body.is-active {
+  overflow: auto;
+
   .l-infographic {
     @include filter(blur(0));
   }
   .l-prepage {
     opacity: 0;
+  }
+  .onepage-pagination {
+    z-index: 5;
   }
 }
 

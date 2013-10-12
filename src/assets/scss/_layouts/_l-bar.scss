@@ -12,7 +12,7 @@
     .m-smartphone {
       width: 0;
 
-      @include transition(width .5s ease-out);
+      @include transition(width .5s ease-out .75s);
       @include translate3d(0,0,0);
     }
     .m-bubble {
