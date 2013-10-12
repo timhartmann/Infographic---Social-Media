@@ -21,8 +21,9 @@
 
 // Header
 .l-banner {
+  opacity: 0;
+  height: 0;
   padding: 1em 0 0;
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: $index-highest;
@@ -85,6 +86,8 @@
 
 // Main / Content
 .l-main {
+  height: 100%;
+
   .m-progress-bar {
     left: 0;
     position: absolute;
@@ -93,9 +96,11 @@
   }
   > section {
     @include box-sizing(border-box);
+    min-height: 100%;
     padding-bottom: 6em;
     padding-top: 6em;
     position: relative;
+    width: 100%;
 
     @include transform-style(preserve-3d);
     @include backface-visibility(hidden);

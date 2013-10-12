@@ -18696,14 +18696,10 @@ $.format = $.validator.format;
 (function($) {
   var self = {
     init: function() {
-      self.pageScroll();
       self.formSend();
       self.bringTo();
       self.headerReplace();
       self.charts();
-    },
-    pageScroll: function() {
-      $('.l-main').onepage_scroll();
     },
     formSend: function() {
       var validator = function() {
@@ -18731,19 +18727,6 @@ $.format = $.validator.format;
             textarea: {
               required: "Schreiben sie uns etwas."
             }
-          },
-          submitHandler: function() {
-            $.ajax({
-              url: '',
-              type: 'POST',
-              dataType: 'json',
-              json: 'json',
-              data: $('form').serialize(),
-
-              success: function(data) {
-                alert('yea');
-              }
-            });
           }
         });
       }()
@@ -18755,6 +18738,7 @@ $.format = $.validator.format;
         event.preventDefault();
 
         $('body').addClass('is-active');
+        $('.l-main').onepage_scroll();
       });
     },
     headerReplace: function() {

@@ -2,8 +2,6 @@
 
 .is-blurry {
   @include filter(blur(8px));
-}
-.l-infographic.is-blurry {
   -webkit-transition : -webkit-filter 1500ms;
      -moz-transition : -webkit-filter 1500ms;
 }
@@ -15,7 +13,13 @@ a:hover {
 body.is-active {
   overflow-y: auto;
 
-  .l-infographic {
+  .l-banner {
+    position: fixed;
+    opacity: 1;
+    height: auto;
+  }
+
+  .is-blurry {
     @include filter(blur(0));
   }
   .l-prepage {
