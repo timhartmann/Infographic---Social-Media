@@ -56,6 +56,19 @@ module.exports = function(grunt) {
         filter: 'isFile'
       }
     },
+    imagemin: {
+      build: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/assets/img/',
+          src: ['**'],
+          dest: 'build/assets/images'
+        }]
+      }
+    },
     cssmin: {
       minify: {
         expand: true,
@@ -106,7 +119,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bumpup');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'copy', 'concat']);
+  grunt.registerTask('default', ['sass', 'copy', 'imagemin', 'concat']);
   grunt.registerTask('release', function (type) {
     type = type ? type : 'patch';
     grunt.task.run('default');
