@@ -24,6 +24,7 @@ body.is-active {
   }
   .l-prepage {
     opacity: 0;
+    z-index: -10;
   }
   .onepage-pagination {
     z-index: 5;
