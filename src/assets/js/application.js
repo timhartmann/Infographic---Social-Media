@@ -67,39 +67,40 @@
           $sections = $('.l-main > section'),
           $wrap = $('.l-main');
 
-      $('.l-banner .pie-chart--first').easyPieChart({
-        animate: 2000,
-        size: 90,
-        barColor: '#eca352',
-        trackColor: 'none',
-        scaleColor: 'none',
-        onStep: function(value) {
-          this.$el.find('span').text(~~value);
-        }
-      });
-      $('.l-banner .pie-chart--second').easyPieChart({
-        animate: 2000,
-        size: 90,
-        barColor: '#d84735',
-        trackColor: 'none',
-        scaleColor: 'none',
-        onStep: function(value) {
-          this.$el.find('span').text(~~value);
-        }
-      });
       var onScrollStart = function() {
         $(document).on('onepagescroll.animation.started', $wrap, function(){
           $sections.each(function() {
             if($(this).hasClass('active')) {
               var $titleData = $(this).data('title'),
+                  $subscriber = 118,
                   $firstData = $(this).data('options').chartfirst,
                   $secondData = $(this).data('options').chartsecond;
 
               $title.text($titleData);
-              $('.l-banner .pie-chart--first').data('easyPieChart').update($firstData);
-              $('.l-banner .pie-chart--second').data('easyPieChart').update($secondData);
+              $('.l-banner .pie-chart--first').data('easyPieChart').update(($firstData/$subscriber)*100);
+              $('.l-banner .pie-chart--second').data('easyPieChart').update(($secondData/$subscriber)*100);
             }
           });
+        });
+        $('.l-banner .pie-chart--first').easyPieChart({
+          animate: 2000,
+          size: 90,
+          barColor: '#eca352',
+          trackColor: 'none',
+          scaleColor: 'none',
+          onStep: function(value) {
+            this.$el.find('span').text(Math.round((value*118)/100));
+          }
+        });
+        $('.l-banner .pie-chart--second').easyPieChart({
+          animate: 2000,
+          size: 90,
+          barColor: '#d84735',
+          trackColor: 'none',
+          scaleColor: 'none',
+          onStep: function(value) {
+            this.$el.find('span').text(Math.round((value*118)/100));
+          }
         });
       }();
     },

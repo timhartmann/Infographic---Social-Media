@@ -566,21 +566,29 @@ h3 {
   position: relative;
   line-height: 1 !important;
 }
-.l-banner ul li > div {
+.l-banner ul li span {
   left: 50%;
+  margin-left: -10px;
+  margin-top: -18px;
   position: absolute;
   top: 50%;
   color: #eca352;
   font-size: 20px;
   font-size: 2rem;
   font-weight: bold;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
-.l-banner ul li.pie-chart--second > div {
+.l-banner ul li i {
+  bottom: 0;
+  left: 50%;
+  margin-bottom: 1.7em;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.l-banner ul li.pie-chart--second span {
   color: #d84735;
 }
 
@@ -1226,12 +1234,12 @@ h3 {
   transition: all 1.5s ease-out 1s;
 }
 .l-room .m-tooltip {
-  margin-left: -180px;
-  margin-top: 70px;
-}
-.l-room .m-tooltip:nth-child(2n) {
   margin-left: 250px;
   margin-top: 125px;
+}
+.l-room .m-tooltip:nth-child(2n) {
+  margin-left: -180px;
+  margin-top: 70px;
 }
 
 section.l-contact {

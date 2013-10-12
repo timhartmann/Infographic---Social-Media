@@ -79,12 +79,12 @@
     @include transition(all 1.5s ease-out 1s);
   }
   .m-tooltip {
-    margin-left: -180px;
-    margin-top: 70px;
+    margin-left: 250px;
+    margin-top: 125px;
 
     &:nth-child(2n) {
-      margin-left: 250px;
-      margin-top: 125px;
+      margin-left: -180px;
+      margin-top: 70px;
     }
   }
 }
