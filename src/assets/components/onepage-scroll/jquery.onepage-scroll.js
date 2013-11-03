@@ -128,7 +128,7 @@
           }
         }
         pos = (index * 100) * -1;
-        el.transformPage(settings, pos);
+        el.transformPage(settings, pos, index);
         el.trigger('onepagescroll.animation.started', {
           direction: 'down',
           slide: index,
@@ -161,7 +161,7 @@
           }
         }
         pos = ((next.data("index") - 1) * 100) * -1;
-        el.transformPage(settings, pos);
+        el.transformPage(settings, pos, index);
         el.trigger('onepagescroll.animation.started', {
           direction: 'up',
           slide: index,
