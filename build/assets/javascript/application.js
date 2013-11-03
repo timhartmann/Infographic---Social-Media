@@ -10091,13 +10091,13 @@ $.format = $.validator.format;
     animationTime: 1000,
     pagination: true,
     updateURL: false
-	};
+  };
 
-	/*------------------------------------------------*/
-	/*  Credit: Eike Send for the awesome swipe event */
-	/*------------------------------------------------*/
+  /*------------------------------------------------*/
+  /*  Credit: Eike Send for the awesome swipe event */
+  /*------------------------------------------------*/
 
-	$.fn.swipeEvents = function() {
+  $.fn.swipeEvents = function() {
       return this.each(function() {
 
         var startX,
@@ -10199,7 +10199,7 @@ $.format = $.validator.format;
           }
         }
         pos = (index * 100) * -1;
-        el.transformPage(settings, pos, index);
+        el.transformPage(settings, pos);
         el.trigger('onepagescroll.animation.started', {
           direction: 'down',
           slide: index,
@@ -10232,7 +10232,7 @@ $.format = $.validator.format;
           }
         }
         pos = ((next.data("index") - 1) * 100) * -1;
-        el.transformPage(settings, pos, index);
+        el.transformPage(settings, pos);
         el.trigger('onepagescroll.animation.started', {
           direction: 'up',
           slide: index,
@@ -10359,7 +10359,6 @@ $.format = $.validator.format;
   }
 
 }(window.jQuery);
-
 
 
 // ┌────────────────────────────────────────────────────────────────────┐ \\
@@ -18778,9 +18777,15 @@ $.format = $.validator.format;
           wrap = '.l-main'
 
       var onScrollStart = function() {
-        $(document).on('onepagescroll.animation.started', wrap, function(){
+        $(document).on('onepagescroll.animation.started', wrap, function(ev, data){
+          console.group('onepagescroll.animation.started');
+          console.log(ev);
+          console.log(data);
+          console.log(arguments);
+          console.groupEnd('onepagescroll.animation.started');
+
           $sections.each(function() {
-            if($(this).hasClass('active')) {
+            if($(this).hasClass('active') && $(this).data('title').length !== 0) {
               var $titleData = $(this).data('title'),
                   $subscriber = 118,
                   $firstData = $(this).data('options').chartfirst,

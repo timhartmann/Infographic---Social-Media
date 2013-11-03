@@ -83,9 +83,15 @@
           wrap = '.l-main'
 
       var onScrollStart = function() {
-        $(document).on('onepagescroll.animation.started', wrap, function(){
+        $(document).on('onepagescroll.animation.started', wrap, function(ev, data){
+          console.group('onepagescroll.animation.started');
+          console.log(ev);
+          console.log(data);
+          console.log(arguments);
+          console.groupEnd('onepagescroll.animation.started');
+
           $sections.each(function() {
-            if($(this).hasClass('active')) {
+            if($(this).hasClass('active') && $(this).data('title').length !== 0) {
               var $titleData = $(this).data('title'),
                   $subscriber = 118,
                   $firstData = $(this).data('options').chartfirst,

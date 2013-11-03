@@ -20,13 +20,13 @@
     animationTime: 1000,
     pagination: true,
     updateURL: false
-	};
+  };
 
-	/*------------------------------------------------*/
-	/*  Credit: Eike Send for the awesome swipe event */
-	/*------------------------------------------------*/
+  /*------------------------------------------------*/
+  /*  Credit: Eike Send for the awesome swipe event */
+  /*------------------------------------------------*/
 
-	$.fn.swipeEvents = function() {
+  $.fn.swipeEvents = function() {
       return this.each(function() {
 
         var startX,
@@ -128,7 +128,7 @@
           }
         }
         pos = (index * 100) * -1;
-        el.transformPage(settings, pos, index);
+        el.transformPage(settings, pos);
         el.trigger('onepagescroll.animation.started', {
           direction: 'down',
           slide: index,
@@ -161,7 +161,7 @@
           }
         }
         pos = ((next.data("index") - 1) * 100) * -1;
-        el.transformPage(settings, pos, index);
+        el.transformPage(settings, pos);
         el.trigger('onepagescroll.animation.started', {
           direction: 'up',
           slide: index,
@@ -288,5 +288,4 @@
   }
 
 }(window.jQuery);
-
 
