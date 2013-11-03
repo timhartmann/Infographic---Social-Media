@@ -23,7 +23,8 @@
         '_layouts/_l-room',
         '_layouts/_l-contact',
         '_layouts/_l-dashboard',
-        '_layouts/_l-onepage';
+        '_layouts/_l-onepage',
+        '_layouts/_l-documentation';
 
 // Modules
 @import '_modules/_m-buttons',
@@ -34,10 +35,12 @@
         '_modules/_m-progress-bar',
         '_modules/_m-tooltips',
         '_modules/_m-charts',
-        '_modules/_m-environment';
+        '_modules/_m-environment',
+        '_modules/_m-paginations';
 
 // States
 @import '_states/_s-base',
         '_states/_s-progress-bar',
         '_states/_s-tooltips',
-        '_states/_s-buttons';
+        '_states/_s-buttons',
+        '_states/_s-paginations';

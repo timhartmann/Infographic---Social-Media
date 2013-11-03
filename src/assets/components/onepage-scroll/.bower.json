@@ -1,14 +1,15 @@
 {
   "name": "onepage-scroll",
-  "homepage": "https://github.com/tikaszvince/onepage-scroll",
-  "_release": "cfc02d47e5",
+  "homepage": "https://github.com/peachananr/onepage-scroll",
+  "version": "1.1.1",
+  "_release": "1.1.1",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "cfc02d47e5dfa59ae5ecb1aa3b273057b4041e5a"
+    "type": "version",
+    "tag": "v1.1.1",
+    "commit": "a5c20984d098620fc6a78a32f216001a1ea7bd85"
   },
-  "_source": "git@github.com:tikaszvince/onepage-scroll.git",
-  "_target": "*",
-  "_originalSource": "git@github.com:tikaszvince/onepage-scroll.git",
+  "_source": "git@github.com:peachananr/onepage-scroll.git",
+  "_target": "~1.1.1",
+  "_originalSource": "git@github.com:peachananr/onepage-scroll.git",
   "_direct": true
 }

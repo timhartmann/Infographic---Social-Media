@@ -1,10 +1,29 @@
 (function($) {
   var self = {
     init: function() {
+      self.pagination();
       self.formSend();
       self.bringTo();
       self.headerReplace();
       self.charts();
+    },
+    pagination: function () {
+      var $documentation = $('.l-documentation'),
+          $pages = $documentation.find('article'),
+          $pagination = $documentation.find('.m-pagination');
+
+      $.each($pagination.find('li'), function() {
+        var $page = $(this);
+
+        $page.on('click', function(event) {
+          event.preventDefault();
+
+          $(this).addClass('is-active');
+          $(this).siblings().removeClass('is-active');
+
+          $pages.eq($(this).index()).addClass('is-active').siblings().removeClass('is-active');
+        });
+      });
     },
     formSend: function() {
       var validator = function() {
@@ -33,6 +52,18 @@
               required: "Schreiben sie uns etwas."
             }
           }
+          // submitHandler: function() {
+          //   $.ajax({
+          //     url: '',
+          //     type: 'POST',
+          //     dataType: 'json',
+          //     data: $('form').serialize(),
+
+          //     success: function(data) {
+          //       $('form').fadeOut(3000);
+          //     }
+          //   });
+          // }
         });
       }()
     },
@@ -49,10 +80,10 @@
     headerReplace: function() {
       var $title = $('.l-banner h1'),
           $sections = $('.l-main > section'),
-          $wrap = $('.l-main');
+          wrap = '.l-main'
 
       var onScrollStart = function() {
-        $(document).on('onepagescroll.animation.started', $wrap, function(){
+        $(document).on('onepagescroll.animation.started', wrap, function(){
           $sections.each(function() {
             if($(this).hasClass('active')) {
               var $titleData = $(this).data('title'),

@@ -6,8 +6,8 @@
     <meta name="description" content="Eine interaktive Infografik die verdeutlicht, wie die sozialen Netzwerke unser Leben verändern und in unseren Alltag integriert sind.">
     <meta name="author" content="Tim Hartmann">
 
-    <link rel="stylesheet" href="assets/stylesheets/application.min.css">
-    <script src="assets/javascript/application.min.js"></script>
+    <link rel="stylesheet" href="assets/stylesheets/application.css">
+    <script src="assets/javascript/application.js"></script>
   </head>
   <body>
     <div class="l-infographic">
@@ -226,7 +226,7 @@
               <h2>Du hast Fragen?</h2>
               <h3>Dann schick mir <strong>eine Mail</strong> oder kontaktiere mich über <strong>die Netzwerke.</strong></h3>
             </div>
-            <form method="get" action="" class="m-form">
+            <form method="post" action="" class="m-form">
               <ol class="l-units">
                 <li class="l-u--1-3">
                   <ol>
@@ -250,9 +250,9 @@
                 <li class="m-cta-bar l-right">
                   <div>
                     <ul class="m-list m-list--horizontally">
-                      <li><a href=""><i class="icon--facebook-circle"></i></a></li>
-                      <li><a href=""><i class="icon--twitter-circle"></i></a></li>
-                      <li><a href=""><i class="icon--google-plus-circle"></i></a></li>
+                      <li><a href="" target="_blank"><i class="icon--facebook-circle"></i></a></li>
+                      <li><a href="" target="_blank"><i class="icon--twitter-circle"></i></a></li>
+                      <li><a href="" target="_blank"><i class="icon--google-plus-circle"></i></a></li>
                     </ul>
                   </div>
                   <div>
@@ -266,6 +266,132 @@
             <a href="http://geek-rocket.de">Portfolio</a>
             <p>Gestaltung & Entwicklung von Tim Hartmann.</p>
           </footer>
+        </section>
+        <section class="l-documentation">
+          <div class="l-constrained">
+            <h1>Dokumentation</h1>
+            <ul class="m-pagination">
+              <li class="is-active"><a href="">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+              <li><a href="">4</a></li>
+              <li><a href="">5</a></li>
+              <li><a href="">6</a></li>
+              <li><a href="">7</a></li>
+            </ul>
+            <article class="is-active">
+              <h2>Inhaltsverzeichnis</h2>
+              <ol>
+                <li>Ziel / Idee</li>
+                <li>Diagrammtyp</li>
+                <li>Herkunft der Daten</li>
+                <li>
+                  Gestaltung
+                  <ol>
+                    <li>Farbgestaltung</li>
+                    <li>Anordnung der Medienelemente</li>
+                    <li>Auswahl der Metaphern</li>
+                  </ol>
+                </li>
+                <li>
+                  Interaktion / Animation / Animationstechnik
+                  <ol>
+                    <li>Einsatz</li>
+                    <li>Begründung</li>
+                    <li>Technik</li>
+                  </ol>
+                </li>
+                <li>
+                  Formular
+                  <ol>
+                    <li>Aufbau</li>
+                    <li>Gestaltung</li>
+                  </ol>
+                </li>
+                <li>Browserunterstützung</li>
+                <li>OpenSource</li>
+              </ol>
+            </article>
+            <article>
+              <h2>1. Ziel / Idee</h2>
+              <p>Das Konzept hinter meiner Infografik war es die Antworten der Befragten zu gruppieren und für jede Gruppe einen Themenbereich zu schaffen, in dem man die ausgewerteten Informationen präsentiert.</p>
+              <p>Durch die Gestaltung und Grafiken soll der Betrachter erahnen können, um welche Art von Informationen er in dem jeweiligen Gebiet erhält. Die Reduzierung war dort auch ein großes Thema - durch interaktive Elemente kann der Benutzer mehr Auswertungen erhalten, bekommt aber nie alle auf einmal.</p>
+              <p>Der Kopf der Seite bewegt sich immer mit, jedoch wird er mit neuen Inhalten bestückt sobald er in ein neues Themengebiet bekommt - eine kurze prägnante Frage mit Auswertung “Ja” und “Nein”.</p>
+
+              <h2>2. Diagrammtyp</h2>
+              <p>Ich habe die Fragen meist so gestellt, dass sie kurz und knapp zu beantworten waren - “Ja” oder “Nein”. Aus diesem Grund habe ich mich für ein Ringdiagramm entschieden, da zusätzlich noch die Personenanzahl dargestellt wird. Diese Art der Visualisierung zeigt meiner Meinung nach besonders den Anteil am Gesamten.</p>
+
+              <h2>3. Herkunft der Daten</h2>
+              <p>Nun geht es um den spannenden Abschnitt, woher ich alle meine Daten bezogen haben. Ich habe ganz am Anfang viel recherchiert, habe allerdings leider nicht wirklich die Informationen gefunden die ich mir erhofft habe. Genau deswegen habe ich mich hingesetzt, mir die Zeit genommen und selber einige Fragen aufgeschrieben, die mich interessieren. Nun musste ich noch schauen, dass der Befragte die Fragen komfortabel und schnell beantworten kann - dafür verwendete ich Typeform.com. Fragen eingetippt, Antworten eingestellt und schnell an alle meine Kontakte in den sozialen Netzwerken geteilt - <strong>unglaubliche 118 Personen füllten den Fragebogen aus.</strong></p>
+            </article>
+            <article>
+              <h2>4. Gestaltung</h2>
+              <p>Hierfür habe ich mir etwas anderes überlegt. Ich habe Themenbereiche geschaffen, die eine bestimmte Gruppe von Daten visualisiert, wenn der Benutzer dort hingescrollt ist. Kurz danach starten auch schon die Animationen, die dem Bereich etwas Leben einhauchen soll.</p>
+              <p>Ich habe mich auch dazu entschlossen, dass ich alles gerne sehr Flat halten möchte. Aktuell sehr im Trend, alles sehr reduziert und es wirkt dadurch nicht so überladen auf den Benutzer. Schließlich stehen die Informationen / Daten im Vordergrund.</p>
+
+              <h3>4.1. Farbgestaltung</h3>
+              <p>Durch die verschiedenen Themenbereiche hatte ich die Möglichkeit viele Farbwelten zu schaffen. Das Dashboard hat eine “Blueprint”-Optik erhalten, die Nachtszene dominiert von dunklen Farben mit Akzenten und die Naturszene ist sehr farbenfroh gestaltet.</p>
+              <p>Wenn man sich nun alle Themenbereiche anschaut, wirken sie farblich dennoch sehr harmonisch und schön.</p>
+
+              <h3>4.2. Anordnung der Medienelemente</h3>
+              <p>Zu meinen Mediaelementen zähle ich die Paginierung auf der linken Seite für die einzelnen Bereiche, die Tooltips und das Dashboard.</p>
+              <p>Die pulsierenden Kreise für die Tooltips wurden immer dort platziert, wovon sie auch die Daten beinhalten - z.B. die Daten über was der Benutzer neben bestimmten Tätigkeiten macht, sind über dem Tooltip auf dem Fernseher erreichbar.</p>
+              <p>Das Dashboard ist ganz zu Anfang. Es enthält allgemeine Informationen über die Befragten und soll als Einleitung dienen. Interaktiv kann man sich die Daten mit der Maus holen.</p>
+            </article>
+            <article>
+              <h3>4.3. Auswahl der Metaphern</h3>
+
+              <h4>Themenbereich mit Nacht:</h4>
+              <p>Die Häuser, Sterner und Mond sollen stark daran erinnern, dass der Benutzer gerade aufgestanden ist bzw. es sehr früh am Morgen ist.</p>
+
+              <h4>Themenbereich mit Zug:</h4>
+              <p>Der Zug soll vor allem die Mobilität mit dem Smartphone darstellen und was wir damit unterwegs erledigen können bzw. wie wir unsere Zeit damit gestalten - <strong>abchecken der sozialen Netzwerke</strong></p>
+
+              <h4>Themenbereich mit Zimmer, Fernseher und Pizza:</h4>
+              <p>Viele Leute konzentrieren sich nicht nur auf eines, sondern haben parallel das Smartphone in der Hand - neben dem Fernsehen und sogar Essen sind wir auf den sozialen Netzen unterwegs.</p>
+
+              <h4>Themenbereich mit Fenster:</h4>
+              <p>Soll lediglich darstellen wie sich zwei Menschen eigentlich unterhalten sollen, aber einer davon an seinem Smartphone zugange ist und der andere sichtlich genervt ist.</p>
+
+              <h2>5. Interaktion / Animation / Animationstechnik</h2>
+
+              <h3>5.1. Einsatz</h3>
+              <p>Jeder Themenbereich hat seine eigenen individuellen Animation erhalten, da ich in jedem Bereich unterschiedliche Gestaltungselemente verwende. Zum Beispiel der Zug soll ausschauen, als würde er ins Bild fahren.</p>
+
+              <p>Eingesetzt habe ich sie, damit zum Beispiel die Stern in der Nachtszene so ausschauen als würden sie hineinfliegen, was dem Ganzen etwas Leben einhaucht und es spannend macht auf den Betrachter.</p>
+            </article>
+            <article>
+              <h3>5.2. Begründung</h3>
+              <p>Die Animationen starten immer erst dann, wenn der Benutzer auf den richtigen Bereich kommt. Zu Anfang weiß der Benutzer gleich, dass nun die Visualisierung der Daten startet und kann darauf genau eingehen.</p>
+              <p>Meist wurden die Animationen eingesetzt um den Themenbereich mehr Leben einzuhauchen und das dargestellte visuell zu unterstützen. Ausgenommen die Graphen, die sich oben im fixierten Kopf ändern. Dort ist die Animation dafür gedacht, dass der Benutzer die Veränderung der Daten mitbekommt.</p>
+              <p>Der pulsierende Kreis eignet sich sehr gut, um zu visualisieren dass hier Interaktion gefragt ist. Das hier weitere Informationen auf den Betrachter warten wird sofort assoziert.</p>
+
+              <h3>5.3. Technik</h3>
+              <p>Zum Einsatz kamen die neuesten Technologien und zwar HTML5 / CSS3 sowie Javascript mit Hilfe des Frameworks “jQuery”. Dazu verwendete ich noch zwei Plugins für die Diagramme / Charts und eines um das langsame Scrollen zu ermöglichen - <strong>OnePageScroll, EasyPieChart und Morris.js.</strong></p>
+              <p>Alle Animationen, ausgenommen die der Graphen, habe ich mittels CSS3 realisiert. Der große Vorteil hierbei ist, dass Geräte die kein Javascript können bzw. deaktiviert wurde, dennoch die Animationen darstellen. Außerdem haben wir mit CSS3 eine deutliche Performance-Steigerung, da die Rechenleistung auf den GPU ausgelegt werden kann.</p>
+            </article>
+            <article>
+              <h2>6. Formular</h2>
+
+              <h3>6.1. Aufbau</h3>
+              <p>Der Aufbau ist sehr einfach gehalten. Der Benutzer soll nicht überfordert werden oder gebeten werden unnötige Informationen einzutragen - schnelle Kontaktaufnahme im Sinne schnelles Ausfüllen der Daten ist garantiert.</p>
+              <p>Der Name, eine Email und die persönliche Nachricht können an mich übermittelt werden - <strong>das sind die Informationen die mir völlig ausreichen.</strong></p>
+              <p>Dazu habe ich mir noch überlegt, dass Kontaktformulare sehr unbeliebt sind und die Benutzer eine schnelle Antwort erwarten, was mit einem Formular nicht assoziert wird. Aus diesen Gründen gibt es noch Alternativen und zwar kann der Betrachter mit mir über die sozialen Netzwerke in Kontakt treten - Facebook, Twitter und GooglePlus. Diese Art der Kontaktaufnahme ist immer sehr direkt und in der Regel bekommt der Betrachter schnell Feedback.</p>
+
+              <h3>6.2. Gestaltung</h3>
+              <p>Insbesondere habe ich darauf geschaut, dass die Proportionen der Felder stimmen. Wenn etwas mehr Platz benötigt, wie zum Beispiel das Feld der persönlichen Nachrichten, dann habe ich es auch größer dargestellt.</p>
+              <p>Die Fehlermeldungen wurden erfahrungsgemäß in rot dargestellt und direkt unter dem Feld dargestellt, welches Fehlerhaft ist. Zusätzlich werden auch die Felder rot markiert - der Benutzer erkennt sofort wo er noch etwas ausfüllen muss.</p>
+              <p>Den Absende-Button habe ich grün gestaltet. Grün wird mit etwas positiven verbunden und regt zum Klicken an. Mit sehr viel Abstand habe ich die alternativen Kontaktmöglichkeiten platziert - sie sollen zum Formular Zugehörigkeit zeigen, jedoch auch vom “Absende”-Button getrennt sein. Es sind letztendlich dennoch zwei verschiedene Möglichkeiten, aber mit dem selben Ziel.</p>
+            </article>
+            <article>
+              <h2>7. Browserunterstützung</h2>
+              <p>Aufgrund der Verwendung von neuesten Technologien ist der Support von bestimmten Browsern ausgeschlossen. Ich habe die Infografik im neuesten Chrome (30) und Safari (7.0) getestet - dort verliefen die Animationen flüssig und alles funktionierte wie gewünscht.</p>
+
+              <h2>8. Open-Source</h2>
+              <p>Sofern man sich den Code anschauen, modifizieren oder verbessern möchte kann man sich die Infografik auch auf Github ansehen. Dort gibt es eine kleine Beschreibung, diverse Versionen und die gesamte Projektstruktur zu sehen.</p>
+              <p><a href="https://github.com/timhartmann/Infographic---Social-Media">Github</a></p>
+            </article>
+          </div>
         </section>
       </main>
     </div>

@@ -10084,7 +10084,7 @@ $.format = $.validator.format;
  * ========================================================== */
 
 !function($){
-  
+
   var defaults = {
     sectionContainer: "section",
     easing: "ease",
@@ -10092,11 +10092,11 @@ $.format = $.validator.format;
     pagination: true,
     updateURL: false
 	};
-	
+
 	/*------------------------------------------------*/
-	/*  Credit: Eike Send for the awesome swipe event */    
+	/*  Credit: Eike Send for the awesome swipe event */
 	/*------------------------------------------------*/
-	
+
 	$.fn.swipeEvents = function() {
       return this.each(function() {
 
@@ -10143,7 +10143,7 @@ $.format = $.validator.format;
 
       });
     };
-	
+
 
   $.fn.onepage_scroll = function(options){
     var settings = $.extend({}, defaults, options),
@@ -10155,16 +10155,16 @@ $.format = $.validator.format;
         lastAnimation = 0,
         quietPeriod = 500,
         paginationList = "";
-    
+
     $.fn.transformPage = function(settings, pos) {
       $(this).addClass('onepage-transform').css({
-        "-webkit-transform": "translate3d(0, " + pos + "%, 0)", 
+        "-webkit-transform": "translate3d(0, " + pos + "%, 0)",
         "-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
-        "-moz-transform": "translate3d(0, " + pos + "%, 0)", 
+        "-moz-transform": "translate3d(0, " + pos + "%, 0)",
         "-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
-        "-ms-transform": "translate3d(0, " + pos + "%, 0)", 
+        "-ms-transform": "translate3d(0, " + pos + "%, 0)",
         "-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
-        "transform": "translate3d(0, " + pos + "%, 0)", 
+        "transform": "translate3d(0, " + pos + "%, 0)",
         "transition": "all " + settings.animationTime + "ms " + settings.easing
       });
     }
@@ -10192,7 +10192,7 @@ $.format = $.validator.format;
           }
           $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
           $("body").addClass("viewing-page-"+next.data("index"))
-          
+
           if (history.replaceState && settings.updateURL == true) {
             var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (index + 1);
             history.pushState( {}, document.title, href );
@@ -10208,7 +10208,7 @@ $.format = $.validator.format;
         });
       }
     }
-    
+
     $.fn.moveUp = function() {
       var el = $(this)
       index = $(settings.sectionContainer +".active").data("index");
@@ -10225,7 +10225,7 @@ $.format = $.validator.format;
           }
           $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
           $("body").addClass("viewing-page-"+next.data("index"))
-          
+
           if (history.replaceState && settings.updateURL == true) {
             var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (index - 1);
             history.pushState( {}, document.title, href );
@@ -10241,7 +10241,7 @@ $.format = $.validator.format;
         });
       }
     }
-    
+
     function init_scroll(event, delta) {
         deltaOfInterest = delta;
         var timeNow = new Date().getTime();
@@ -10258,9 +10258,9 @@ $.format = $.validator.format;
         }
         lastAnimation = timeNow;
     }
-    
+
     // Prepare everything before binding wheel scroll
-    
+
     el.addClass("onepage-wrapper").css("position","relative");
     $.each( sections, function(i) {
       $(this).css({
@@ -10272,26 +10272,26 @@ $.format = $.validator.format;
         paginationList += "<li><a data-index='"+(i+1)+"' href='#" + (i+1) + "'></a></li>"
       }
     });
-    
-    el.swipeEvents().bind("swipeDown",  function(){ 
+
+    el.swipeEvents().bind("swipeDown",  function(){
       el.moveUp();
-    }).bind("swipeUp", function(){ 
-      el.moveDown(); 
+    }).bind("swipeUp", function(){
+      el.moveDown();
     });
-    
+
     // Create Pagination and Display Them
     if(settings.pagination == true) {
       $("<ul class='onepage-pagination'>" + paginationList + "</ul>").prependTo("body");
       posTop = (el.find(".onepage-pagination").height() / 2) * -1;
       el.find(".onepage-pagination").css("margin-top", posTop);
     }
-    
+
     if(window.location.hash != "" && window.location.hash != "#1") {
       init_index =  window.location.hash.replace("#", "")
       $(settings.sectionContainer + "[data-index='" + init_index + "']").addClass("active")
       $("body").addClass("viewing-page-"+ init_index)
       if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + init_index + "']").addClass("active");
-      
+
       next = $(settings.sectionContainer + "[data-index='" + (init_index) + "']");
       if(next) {
         next.addClass("active")
@@ -10305,7 +10305,7 @@ $.format = $.validator.format;
       }
       pos = ((init_index - 1) * 100) * -1;
       el.transformPage(settings, pos);
-      
+
     }else{
       $(settings.sectionContainer + "[data-index='1']").addClass("active")
       $("body").addClass("viewing-page-1")
@@ -10331,9 +10331,9 @@ $.format = $.validator.format;
         if (settings.updateURL == false) return false;
       });
     }
-    
-    
-    
+
+
+
     $(document).bind('mousewheel DOMMouseScroll', function(event) {
       event.preventDefault();
       var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
@@ -10355,9 +10355,9 @@ $.format = $.validator.format;
       }
     });
     return false;
-    
+
   }
-  
+
 }(window.jQuery);
 
 
@@ -18696,10 +18696,29 @@ $.format = $.validator.format;
 (function($) {
   var self = {
     init: function() {
+      self.pagination();
       self.formSend();
       self.bringTo();
       self.headerReplace();
       self.charts();
+    },
+    pagination: function () {
+      var $documentation = $('.l-documentation'),
+          $pages = $documentation.find('article'),
+          $pagination = $documentation.find('.m-pagination');
+
+      $.each($pagination.find('li'), function() {
+        var $page = $(this);
+
+        $page.on('click', function(event) {
+          event.preventDefault();
+
+          $(this).addClass('is-active');
+          $(this).siblings().removeClass('is-active');
+
+          $pages.eq($(this).index()).addClass('is-active').siblings().removeClass('is-active');
+        });
+      });
     },
     formSend: function() {
       var validator = function() {
@@ -18728,6 +18747,18 @@ $.format = $.validator.format;
               required: "Schreiben sie uns etwas."
             }
           }
+          // submitHandler: function() {
+          //   $.ajax({
+          //     url: '',
+          //     type: 'POST',
+          //     dataType: 'json',
+          //     data: $('form').serialize(),
+
+          //     success: function(data) {
+          //       $('form').fadeOut(3000);
+          //     }
+          //   });
+          // }
         });
       }()
     },
@@ -18744,10 +18775,10 @@ $.format = $.validator.format;
     headerReplace: function() {
       var $title = $('.l-banner h1'),
           $sections = $('.l-main > section'),
-          $wrap = $('.l-main');
+          wrap = '.l-main'
 
       var onScrollStart = function() {
-        $(document).on('onepagescroll.animation.started', $wrap, function(){
+        $(document).on('onepagescroll.animation.started', wrap, function(){
           $sections.each(function() {
             if($(this).hasClass('active')) {
               var $titleData = $(this).data('title'),

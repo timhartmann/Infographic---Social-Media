@@ -17,6 +17,8 @@
 }
 .l-infographic {
   height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 // Header
@@ -87,6 +89,7 @@
 // Main / Content
 .l-main {
   height: 100%;
+  margin: 0 auto;
 
   .m-progress-bar {
     left: 0;
